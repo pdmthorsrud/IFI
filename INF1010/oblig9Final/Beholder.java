@@ -16,7 +16,7 @@ public class Beholder{
         }
     }
 
-
+DETTE ER EN TEST
     public Rute hentRute(int i){
         return ruter[i];
     }
