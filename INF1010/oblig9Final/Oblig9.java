@@ -5,7 +5,9 @@ public class Oblig9{
 	Brett b = new Brett();
 
 	b.lesFil(args[0]);
-	b.printRuteRadNr(1, 3);
+	b.printRuteRadNr(0, 0);
+	b.printBrett();
+	b.startLosning();
 	b.printBrett();
     }
 }
