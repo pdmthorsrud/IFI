@@ -162,4 +162,6 @@ public class Rute{
 	return false;
     }
 
+    //sjekker om stuff funker
+
 }
