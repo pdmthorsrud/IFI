@@ -152,14 +152,20 @@ public class Rute{
 		    verdi = muligeVerdier[i];
 		}
 	    }
+	}else if(harSattVerdi()){
+	    if(!fyllUtDenneRutenOgResten()){
+		return false;
+	    }
+	}else if(!finnesMuligeVerdier()){
+	    return false;
 	}
-	if(harSattVerdi()){
-	    neste.fyllUtDenneRutenOgResten();
+	if(neste==null){
+	    System.out.println("Har lost brettet");
 	}
-	if(neste.fyllUtDenneRutenOgResten()){
-	    
-	}
-	return false;
+	
+	if(!neste.fyllUtDenneRutenOgResten()){
+	    if(
+	}	
     }
 
     //sjekker om stuff funker
