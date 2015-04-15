@@ -87,7 +87,7 @@ public class Rute{
     }
 
     public String[] finnMuligeTall(){
-        if(verdi != null){
+        if(muligeVerdier==null){
             System.out.println("Denne ruten har en allerede satt verdi : " + verdi);
             return null;
         }
@@ -98,6 +98,9 @@ public class Rute{
     }
 
     public boolean finnesMuligeVerdier(){
+	if(muligeVerdier==null){
+	    return false;
+	}
         for(int i=0; i<muligeVerdier.length; i++){
             if(muligeVerdier[i]!=null){
                 return true;

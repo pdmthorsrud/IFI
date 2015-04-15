@@ -49,7 +49,6 @@ public class Beholder{
     }
 
     public String[] sjekkVerdier(String[] k){
-        System.out.println("Starter sjekk av verdier");
         for(int i=0; i<k.length; i++){
 	    
             for(int j=0; j<ruter.length; j++){
@@ -58,7 +57,6 @@ public class Beholder{
                 }
             }
         }
-        System.out.println("Har sjekket verdier");
         return k;
     }
 }
