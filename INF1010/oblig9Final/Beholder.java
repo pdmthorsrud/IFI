@@ -5,8 +5,6 @@ public class Beholder{
     Beholder(int lengde){
         ruter = new Rute[lengde];
     }
-
-    ABSOLUTE LAST CHECK TO SEE IF THINGS WORK
     
     public int hentLengde(){
         return ruter.length;

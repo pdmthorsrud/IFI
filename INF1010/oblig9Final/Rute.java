@@ -2,14 +2,14 @@ public class Rute{
 
     private int lengdeFinal;
     private int ruteID;
-    private String verdi = ".";
+    private String verdi;
     private int radNr;
     private int kolonneNr;
     private int boksNr;
     private int antRaderIBoks;
     private int antKolonnerIBoks;
     private String[] muligeVerdier;
-    private Rute neste;
+    public Rute neste;
     private Beholder rad;
     private Beholder kolonne;
     private Beholder boks;
@@ -96,6 +96,22 @@ public class Rute{
 	return muligeVerdier;
     }
 
+    public boolean finnesMuligeVerdier(){
+	for(int i=0; i<muligeVerdier.length; i++){
+	    if(muligeVerdier[i]!=null){
+		return true;
+	    }
+	}
+	return false;
+    }
+
+    public boolean harSattVerdi(){
+	if(muligeVerdier==null){
+	    return true;
+	}
+	return false;
+    }
+
     public void printMuligeVerdierArray(){
 	for(int i=0; i<muligeVerdier.length; i++){
 	    System.out.println(muligeVerdier[i]);
@@ -125,5 +141,25 @@ public class Rute{
 	return verdi;
     }
 
+    public Rute hentNeste(){
+	return neste;
+    }
+
+    public boolean fyllUtDenneRutenOgResten(){
+	if(!harSattVerdi() && finnesMuligeVerdier()){
+	    for(int i=0; i<muligeVerdier.length; i++){
+		if(muligeVerdier[i]!=null){
+		    verdi = muligeVerdier[i];
+		}
+	    }
+	}
+	if(harSattVerdi()){
+	    neste.fyllUtDenneRutenOgResten();
+	}
+	if(neste.fyllUtDenneRutenOgResten()){
+	    
+	}
+	return false;
+    }
 
 }

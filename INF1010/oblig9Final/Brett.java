@@ -1,4 +1,3 @@
-
 import java.util.*;
 import java.io.*;
 
@@ -11,6 +10,8 @@ public class Brett{
     private Beholder[] rader;
     private Beholder[] kolonner;
     private Beholder[] bokser;
+    private Rute[] ruter;
+    private int ruteArrayTeller=0;
 
     public void lesFil(String filnavn) throws Exception{
 	in = new Scanner(new File(filnavn));
@@ -25,6 +26,7 @@ public class Brett{
 	rader = new Beholder[lengdeFinal];
 	kolonner = new Beholder[lengdeFinal];
 	bokser = new Beholder[lengdeFinal];
+	ruter = new Rute[lengdeFinal*lengdeFinal];
 	opprettBeholdere(rader, lengdeFinal);
 	opprettBeholdere(kolonner, lengdeFinal);
 	opprettBeholdere(bokser, lengdeFinal);
@@ -36,6 +38,7 @@ public class Brett{
 	    opprettRuter(lengdeFinal, innlestRuter);
 	}
 	System.out.println("Ferdig med opprettelse av ruter");
+	opprettNestepekere();
     }
 
     public void opprettBeholdere(Beholder[] beholder, int lengde){
@@ -46,13 +49,23 @@ public class Brett{
 
     public void opprettRuter(int lengde, String[] s){
 	for(int i=0; i<s.length; i++){
-	    if(s[i].equals(".")){
-		new Rute(lengde, null, this, ruteID, antRaderIBoks, antKolonnerIBoks);
+	    if(s[i].equals(".")){		
+		ruter[ruteID] = new Rute(lengde, null, this, ruteID, antRaderIBoks, antKolonnerIBoks);
 		ruteID++;
 	    }else{
-		new Rute(lengde, s[i], this, ruteID, antRaderIBoks, antKolonnerIBoks);
+		ruter[ruteID] = new Rute(lengde, s[i], this, ruteID, antRaderIBoks, antKolonnerIBoks);
 		ruteID++;
 	    }
+	}
+    }
+
+    public void opprettNestepekere(){
+	for(int i=0; i<ruter.length; i++){
+	    if(i==ruter.length-1){
+		ruter[i].neste = null;
+		return;
+	    }
+	    ruter[i].neste = ruter[i+1];
 	}
     }
 
