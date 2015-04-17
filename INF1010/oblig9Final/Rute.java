@@ -17,176 +17,187 @@ public class Rute{
     private Brett b;
 
     Rute(int lengde, String verdi, Brett b, int ruteID, int antRaderIBoks, int antKolonnerIBoks){
-        this.lengdeFinal = lengde;
-        this.b = b;
-        this.verdi=verdi;
-        this.ruteID = ruteID;
-        this.antRaderIBoks = antRaderIBoks;
-        this.antKolonnerIBoks = antKolonnerIBoks;
-        if(verdi!=null){
-            muligeVerdier = null;
-        }else{
-            muligeVerdier = new String[lengde];
+	this.lengdeFinal = lengde;
+	this.b = b;
+	this.verdi=verdi;
+	this.ruteID = ruteID;
+	this.antRaderIBoks = antRaderIBoks;
+	this.antKolonnerIBoks = antKolonnerIBoks;
+	if(verdi!=null){
+	    muligeVerdier = null;
+	}else{
+	    muligeVerdier = new String[lengde];
 
-            for(int i=0; i<lengde; i++){
-                muligeVerdier[i] = i+1+"";
-                if(i>8){
-                    for(char ch='a'; i<lengde; ch++){
-                        muligeVerdier[i] = ch+"";
-                        i++;
-                    }
-                    break;
-                }
-            }
-        }
-        opprettRad();
-        opprettKolonne();
-        opprettBoks();
+	    for(int i=0; i<lengde; i++){
+		muligeVerdier[i] = i+1+"";
+		if(i>8){
+		    for(char ch='a'; i<lengde; ch++){
+			muligeVerdier[i] = ch+"";
+			i++;
+		    }
+		    break;
+		}
+	    }
+	}
+	opprettRad();
+	opprettKolonne();
+	opprettBoks();
     }
 
     public String toString(){
-        if(verdi==null){
-            return ".";
-        }
-        return verdi;
+	if(verdi==null){
+	    return ".";
+	}
+	return verdi;
     }
 
     public void opprettRad(){
-        if(ruteID!=0){
-            radNr = ruteID/lengdeFinal;
-            rad = b.hentBeholder(radNr, "rad");
-        }else{
-            rad = b.hentBeholder(0, "rad");
-        }
-        rad.settInnRute(this);
+	if(ruteID!=0){
+	    radNr = ruteID/lengdeFinal;
+	    rad = b.hentBeholder(radNr, "rad");
+	}else{
+	    rad = b.hentBeholder(0, "rad");
+	}
+	rad.settInnRute(this);
     }
 
     public void opprettKolonne(){
-        if(ruteID!=0){
-            kolonneNr = ruteID%lengdeFinal;
-            System.out.println("KolonneNr for rute " + ruteID + " : " +kolonneNr);
-            kolonne = b.hentBeholder(kolonneNr, "kolonne");
-        }else{
-            kolonne = b.hentBeholder(0, "kolonne");
-        }
-        kolonne.settInnRute(this);
+	if(ruteID!=0){
+	    kolonneNr = ruteID%lengdeFinal;
+	    System.out.println("KolonneNr for rute " + ruteID + " : " +kolonneNr);
+	    kolonne = b.hentBeholder(kolonneNr, "kolonne");
+	}else{
+	    kolonne = b.hentBeholder(0, "kolonne");
+	}
+	kolonne.settInnRute(this);
     }
 
     public void printKolonne(){
-        kolonne.printBeholder();
+	kolonne.printBeholder();
     }
 
     public void opprettBoks(){
-        if(ruteID!=0){
-            boksNr = (radNr -(radNr%antRaderIBoks) + (kolonneNr/antKolonnerIBoks));
-            boks = b.hentBeholder(boksNr, "boks");
-        }else{
-            boks = b.hentBeholder(0, "boks");
-        }
-        boks.settInnRute(this);
+	if(ruteID!=0){
+	    boksNr = (radNr -(radNr%antRaderIBoks) + (kolonneNr/antKolonnerIBoks));
+	    boks = b.hentBeholder(boksNr, "boks");
+	}else{
+	    boks = b.hentBeholder(0, "boks");
+	}
+	boks.settInnRute(this);
     }
 
     public String[] finnMuligeTall(){
-        if(muligeVerdier==null){
-            System.out.println("Denne ruten har en allerede satt verdi : " + verdi);
-            return null;
-        }
-        rad.sjekkVerdier(muligeVerdier);
-        kolonne.sjekkVerdier(muligeVerdier);
-        boks.sjekkVerdier(muligeVerdier);
-        return muligeVerdier;
+	if(muligeVerdier==null){
+	    System.out.println("Denne ruten har en allerede satt verdi : " + verdi);
+	    return null;
+	}
+	rad.sjekkVerdier(muligeVerdier);
+	kolonne.sjekkVerdier(muligeVerdier);
+	boks.sjekkVerdier(muligeVerdier);
+	return muligeVerdier;
     }
 
     public boolean finnesMuligeVerdier(){
 	if(muligeVerdier==null){
 	    return false;
 	}
-        for(int i=0; i<muligeVerdier.length; i++){
-            if(muligeVerdier[i]!=null){
-                return true;
-            }
-        }
-        return false;
+	for(int i=0; i<muligeVerdier.length; i++){
+	    if(muligeVerdier[i]!=null){
+		return true;
+	    }
+	}
+	return false;
     }
 
     public boolean harSattVerdi(){
-        if(muligeVerdier==null){
-            return true;
-        }
-        return false;
+	if(muligeVerdier==null){
+	    return true;
+	}
+	return false;
     }
 
     public void printMuligeVerdierArray(){
-        for(int i=0; i<muligeVerdier.length; i++){
-            System.out.println(muligeVerdier[i]);
-        }
+	for(int i=0; i<muligeVerdier.length; i++){
+	    System.out.println(muligeVerdier[i]);
+	}
     }
 
     public void printMuligeVerdier(){
-        if(verdi!=null){
-            System.out.println("Denne ruten har den satte verdien : " + verdi);
-            return;
-        }
-        finnMuligeTall();
-        System.out.println("Printer ut alle mulige verdier for rute nr: " + ruteID);
-        for(int i=0; i<muligeVerdier.length; i++){
-            if(muligeVerdier[i]!=null)
-                System.out.println(muligeVerdier[i]);
-        }
-        System.out.println("Ferdig med printMuligeVerdier");
+	if(verdi!=null){
+	    System.out.println("Denne ruten har den satte verdien : " + verdi);
+	    return;
+	}
+	finnMuligeTall();
+	System.out.println("Printer ut alle mulige verdier for rute nr: " + ruteID);
+	for(int i=0; i<muligeVerdier.length; i++){
+	    if(muligeVerdier[i]!=null)
+		System.out.println(muligeVerdier[i]);
+	}
+	System.out.println("Ferdig med printMuligeVerdier");
     }
 
     public void settNeste(Rute r){
-        neste = r;
+	neste = r;
     }
 
     public String hentVerdi(){
-        return verdi;
+	return verdi;
     }
 
     public Rute hentNeste(){
-        return neste;
+	return neste;
     }
 
     public boolean fyllUtDenneRutenOgResten(){
-        System.out.println("ER INNE I FYLLUT");
-        if(finnMuligeTall()==null){
+	System.out.println("ER INNE I FYLLUT");
+	if(finnMuligeTall()==null){}
+	
+	System.out.println("Boooo");
+	if(!harSattVerdi() && finnesMuligeVerdier()){
+	    System.out.println("forste iftest");
+	    while(arrayTeller<muligeVerdier.length){
+		if(muligeVerdier[arrayTeller]!=null){
+		    verdi = muligeVerdier[arrayTeller];
+		    break;
+		}
+		arrayTeller++;
+	    }
+	    if(arrayTeller==muligeVerdier.length){
+		System.out.println("andre iftest");
+		verdi=null;
+		arrayTeller=0;
+		return false;
+	    }
+	}else if(!finnesMuligeVerdier()){
+	    return false;
+	}
+	
+	if(neste==null){
+	    System.out.println("tredje iftest");
+	    System.out.println("HAR LOST BRETTET");
+	}
 
-        }
-        System.out.println("Boooo");
-        if(!harSattVerdi() && finnesMuligeVerdier()){
-            System.out.println("forste iftest");
-            while(arrayTeller<muligeVerdier.length){
-                if(muligeVerdier[arrayTeller]!=null){
-                    verdi = muligeVerdier[arrayTeller];
-                    break;
-                }
-                arrayTeller++;
-            }
-            if(arrayTeller==muligeVerdier.length){
-                System.out.println("andre iftest");
-                arrayTeller=0;
-                return false;
-            }
-        }else if(!finnesMuligeVerdier()){
-            return false;
-        }
-        if(neste==null){
-            System.out.println("tredje iftest");
-            System.out.println("HAR LOST BRETTET");
-        }
-
-        if(!neste.fyllUtDenneRutenOgResten()){
-            System.out.println("fjerde iftest");
-            if(!harSattVerdi()){
-                System.out.println("femte iftest");
-                verdi = null;
-                return false;
-            }else if(harSattVerdi()){
-                System.out.println("sjette iftest");
-                return false;
-            }
-        }
-        return true;
+	if(!neste.fyllUtDenneRutenOgResten()){
+	    System.out.println("fjerde iftest");
+	    if(!harSattVerdi() && !finnesMuligeVerdier()){
+		System.out.println("femte iftest");
+		verdi = null;
+		arrayTeller=0;
+		return false;
+	    }else if(!harSattVerdi() && finnesMuligeVerdier){
+		while(arrayTeller<muligeVerdier.length){
+		    if(muligeVerdier[arrayTeller]!=null){
+			verdi = muligeVerdier[arrayTeller];
+			break;
+		    }
+		    arrayTeller+;
+		}
+		neste.fyllUtDenneRutenOgResten();
+	    }else if(harSattVerdi()){
+		System.out.println("sjette iftest");
+		return false;
+	    }
+	}
+	return true;
     }
 }
