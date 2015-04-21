@@ -1,27 +1,37 @@
 * Module 1 
-** Question 1
+** DONE Question 1
    - Explain feature-based stereotyping! Can you think of an example of the same process at work here in Norway?
-** Question 2
+** DONE Question 2
    - What can we assess with the who-said-what paradigm and how can this be achieved?
-** Question 3
+** DONE Question 3
    - What is the shooter bias and how is it measured?
    If we were to assess the shooter bias against Non-Caucasians wearing Muslim headgear what result
    would you expect? Explain!
-** Question 4
-   - What is anticipatory reciprocity? How does it emerge?
-** Question 5
+** TODO Question 4
+   * What is anticipatory reciprocity? How does it emerge?
+** DONE Question 5
    - How convincing is the evidence for Botox reducing emotion recognition accuracy? (to answer this
    question, you should also do a search for other studies on the same issue!
-** Question 6
+** DONE Question 6
    - Why do people react with elevated cortisol to not being mimicked?
    What is socially dependent cortisol reactivity?
    What implications might the present findings have for health models and health interventions?
-** Question 7
+** TODO Question 7
    - When do people tend to mimic each other behaviorally? Explain what sorts of behavior can be mimicked!
    Should we train people to mimic?
-** Question 8
+** TODO Question 8
    - How does havinga negative attitude towards someone influence facial responses to facial emotional
    expressions of that person?
 * Module 2
 * Module 3
+** Question 1
+   - What does it mean to say that a social concept is embodied? 
+   Compare the idea of modal mental representations to the idea of amodal mental representations in associative networks. 
+   Illustrate this with an example.
+** Question 2
+   - How could modal representations develop? Describe at least 2 different accounts, and name examples of embodied concepts for each
+** Question 3
+   - What predictions does the embodiment account make - how can it be tested whether a concept is embodied? 
+   Name at least 2 methods, and describe one in more detail with an example study.
+** Question 4
 * Module 4
