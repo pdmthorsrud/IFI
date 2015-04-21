@@ -107,8 +107,9 @@ public class Brett{
     public void printKolonne(int i){
 	kolonner[i].printBeholder();
     }
-
+    /*
     public void startLosning(){
 	ruter[0].fyllUtDenneRutenOgResten();
     }
+    */
 }

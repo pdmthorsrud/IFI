@@ -64,7 +64,7 @@ public class Rute{
     public void opprettKolonne(){
 	if(ruteID!=0){
 	    kolonneNr = ruteID%lengdeFinal;
-	    System.out.println("KolonneNr for rute " + ruteID + " : " +kolonneNr);
+	    
 	    kolonne = b.hentBeholder(kolonneNr, "kolonne");
 	}else{
 	    kolonne = b.hentBeholder(0, "kolonne");
@@ -147,7 +147,7 @@ public class Rute{
     public Rute hentNeste(){
 	return neste;
     }
-
+    /*
     public boolean fyllUtDenneRutenOgResten(){
 	System.out.println("ER INNE I FYLLUT");
 	if(finnMuligeTall()==null){}
@@ -190,7 +190,7 @@ public class Rute{
 			verdi = muligeVerdier[arrayTeller];
 			break;
 		    }
-		    arrayTeller+;
+		    arrayTeller++;
 		}
 		neste.fyllUtDenneRutenOgResten();
 	    }else if(harSattVerdi()){
@@ -199,5 +199,5 @@ public class Rute{
 	    }
 	}
 	return true;
-    }
+	}*/
 }

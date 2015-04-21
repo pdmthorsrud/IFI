@@ -49,8 +49,7 @@ public class Beholder{
     }
 
     public String[] sjekkVerdier(String[] k){
-        for(int i=0; i<k.length; i++){
-	    
+        for(int i=0; i<k.length; i++){	    
             for(int j=0; j<ruter.length; j++){
 		if(ruter[j].hentVerdi()!=null && k[i] !=null && k[i].equals(ruter[j].hentVerdi())){
                     k[i]=null;
