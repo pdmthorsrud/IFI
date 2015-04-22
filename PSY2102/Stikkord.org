@@ -33,5 +33,13 @@
 ** Question 3
    - What predictions does the embodiment account make - how can it be tested whether a concept is embodied? 
    Name at least 2 methods, and describe one in more detail with an example study.
+*** Stikkord
+    * Direct experience: development of schemas where we connect something new to 
+      already existing modal representations. Butterfly: an insect, small, flys, etc.
+    * Judgement (example of how direct experiences are used to connect it to something
+      completely abstract, and develop a modal representation of it)
+    * metaphoric mapping: developed by having no direct experience or anything to link an abstract concept
+      up against. Therefore we use linguistic metaphors to explain something completely abstract
+    * inherited association:  
 ** Question 4
 * Module 4
