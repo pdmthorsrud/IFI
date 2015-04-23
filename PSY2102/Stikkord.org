@@ -2,67 +2,113 @@
 ** DONE Question 1
    - Explain feature-based stereotyping! Can you think of an example of the same process at work here in Norway?
      (Hjemme på Hen)
+
 ** DONE Question 2
    - What can we assess with the who-said-what paradigm and how can this be achieved?
      (Kringsjå)
+
 ** DONE Question 3
    - What is the shooter bias and how is it measured?
    If we were to assess the shooter bias against Non-Caucasians wearing Muslim headgear what result
    would you expect? Explain!
    (Maria)
+
 ** TODO Question 4
    * What is anticipatory reciprocity? How does it emerge?
+
 ** DONE Question 5
    - How convincing is the evidence for Botox reducing emotion recognition accuracy? (to answer this
    question, you should also do a search for other studies on the same issue!
    (Forskningsparken)
+
 ** DONE Question 6
    - Why do people react with elevated cortisol to not being mimicked?
    What is socially dependent cortisol reactivity?
    What implications might the present findings have for health models and health interventions?
    (Bestemor/bestefar på Storløkka)
+
 ** TODO Question 7
    - When do people tend to mimic each other behaviorally? Explain what sorts of behavior can be mimicked!
    Should we train people to mimic?
+
 ** DONE Question 8
    - How does havinga negative attitude towards someone influence facial responses to facial emotional
    expressions of that person? (Bestemor/bestefar på andre sia)
+
+
 * DONE Module 2
+
 * TODO Module 3
 ** TODO Question 1
    - What does it mean to say that a social concept is embodied? 
    Compare the idea of modal mental representations to the idea of amodal mental representations in associative networks. 
    Illustrate this with an example.
+
 ** TODO Question 2
    - How could modal representations develop? Describe at least 2 different accounts, and name examples of embodied concepts for each
 *** DONE Stikkord
-    * Grounded cognition
-      - mental representations are all grounded in bodily morphology
-      - All aspects of psychological processes are influenced by some degree by our real life world
-    * Explain modal representations
-      - We can say that the embodiment framework assumes how we analyze and react to a situation must take into account our bodily abilities.
-      - They remain in your head as physical, and no matter what, you can relate this to the real world vs associative network 
-    * Direct experience: development of schemas where we connect something new to 
-      already existing modal representations. Butterfly: an insect, small, flys, etc.
-      - Eple erfaring
-      - Judgement (example of how direct experiences are used to connect it to something
-	completely abstract, and develop a modal representation of it)
-    * metaphoric mapping: developed by having no direct experience or anything to link an abstract concept
-      up against. Therefore we use linguistic metaphors to explain something completely abstract
-      - Use example of time mapped into our spatial dimensions
-      - Also use smell example, Lee and Schwarz found that smell influences suspicion
-    * inherited association: got no fucking clue (yet), considering to just leave it out, and explain metaphoric and direct
-** TODO Question 3
+    1) Grounded cognition
+       - mental representations are all grounded in bodily morphology
+       - All aspects of psychological processes are influenced by some degree by our real life world
+    2) Explain modal representations
+       - We can say that the embodiment framework assumes how we analyze and react to a situation must take into account our bodily abilities.
+       - They remain in your head as physical, and no matter what, you can relate this to the real world vs associative network 
+    3) Direct experience: development of schemas where we connect something new to 
+       already existing modal representations. Butterfly: an insect, small, flys, etc.
+       - Eple erfaring
+       - Judgement (example of how direct experiences are used to connect it to something
+	 completely abstract, and develop a modal representation of it)
+    4) metaphoric mapping: developed by having no direct experience or anything to link an abstract concept
+       up against. Therefore we use linguistic metaphors to explain something completely abstract
+       - Use example of time mapped into our spatial dimensions
+       - Also use smell example, Lee and Schwarz found that smell influences suspicion
+    5) inherited association: got no fucking clue (yet), considering to just leave it out, and explain metaphoric and direct
+*** TODO Assosiasjoner
+    1. grinding someone + collision
+       - mental presentation + grinding
+    2. plane model + presentation
+       - anal +
+       - rain + physics
+    3. 
+       - apple falling
+       - judge judy
+    4. 
+       - timeshower + someone walking around a room
+       - fishy + bruce lee + scwarznegger
+
+** DONE Question 3
    - What predictions does the embodiment account make - how can it be tested whether a concept is embodied? 
    Name at least 2 methods, and describe one in more detail with an example study.
-*** Stikkord
-    - explain mental representations
-      * cognitive symbols that represent the external reality
-    - Associative network vs embodiment account
-    - 
-    
+*** DONE Stikkord
+    1. explain mental representations
+       * cognitive symbols that represent the external reality
+    2. Associative network vs embodiment account
+       * Root/branch
+    3. interference experiment
+       * Stoop effect
+    4. predictions:
+       * power and size
+       * every concept that has a physical part explaining something abstract,
+	 could be influenced by adding that physical part to said concept.
+    5. clipboard
+    6. book weighing heavily
+       * need to know something to rely on embodied concepts
+*** DONE Assosiasjoner
+    1. mental presentation
+       * cone symbol + blinking X
+    2. Ass vs.
+       * groot from
+    3. interference on a screen
+       * a barstool
+    4. predator
+       * poop + sizzling
+       * abdominals -> physics
+    5. clipboard
+    6. someone trying to lift a heavy book
+       
 * TODO Module 4
 
 
 * Reiserute
 ** 
+   
