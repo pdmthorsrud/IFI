@@ -1,4 +1,4 @@
-* TODO Module 1 
+* DONE Module 1 
 ** DONE Question 1
    - Explain feature-based stereotyping! Can you think of an example of the same process at work here in Norway?
      (Hjemme på Hen)
@@ -35,7 +35,7 @@
    - How does havinga negative attitude towards someone influence facial responses to facial emotional
    expressions of that person? (Bestemor/bestefar på andre sia)
 
-
+   
 * DONE Module 2
 
 * TODO Module 3
@@ -96,8 +96,8 @@
 *** DONE Assosiasjoner
     1. mental presentation
        * cone symbol + blinking X
-    2. Ass vs.
-       * groot from
+    2. Ass vs. embrace
+       * groot from guardians of the galaxy
     3. interference on a screen
        * a barstool
     4. predator
@@ -105,6 +105,7 @@
        * abdominals -> physics
     5. clipboard
     6. someone trying to lift a heavy book
+       
        
 * TODO Module 4
 
