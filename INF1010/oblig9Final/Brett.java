@@ -47,6 +47,21 @@ public class Brett{
 	}
     }
 
+    public void startPekere(){
+	for(int i=0; i<ruter.length; i++){
+	    if(ruter[i].neste==null){
+		break;
+	    }
+	    System.out.println(ruter[i].neste);
+	}
+    }
+
+    public void printruterArray(){
+	for(int i=0; i<ruter.length; i++){
+	    System.out.println(ruter[i]);
+	}
+    }
+
     public void opprettRuter(int lengde, String[] s){
 	for(int i=0; i<s.length; i++){
 	    if(s[i].equals(".")){		
@@ -69,6 +84,10 @@ public class Brett{
 	}
     }
 
+    public void printAntallLosninger(){
+	System.out.println("Antall losninger: " + ruter[0].antallLosninger);
+    }
+    
     public Beholder hentBeholder(int nr, String type){
 	if(type.equals("rad")){
 	    Beholder temp = rader[nr];
@@ -107,9 +126,9 @@ public class Brett{
     public void printKolonne(int i){
 	kolonner[i].printBeholder();
     }
-    /*
+    
     public void startLosning(){
 	ruter[0].fyllUtDenneRutenOgResten();
     }
-    */
+    
 }
