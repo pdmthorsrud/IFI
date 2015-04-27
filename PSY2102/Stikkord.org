@@ -110,6 +110,11 @@
 * TODO Module 4
 
 
+
+* Hindsight bias
+  - 
+
+
 * Reiserute
 ** 
    
