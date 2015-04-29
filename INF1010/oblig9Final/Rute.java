@@ -173,85 +173,41 @@ public class Rute{
 	printNestePekere();
     }
 
-    public void fyllUtDenneRutenOgResten(){
+    public void fyllUtDenneRutenOgResten(boolean skrive){
 	finnMuligeTall();
-	//	System.out.println("Hopper fremover");
+	//      System.out.println("Hopper fremover");
 	if(harSattVerdi()){
 	    if(neste==null){
 		antallLosninger++;
+		if(!skrive){
+		    b.printBrettAlternativ();
+		}else{
+		    b.leggTilISudokuBeholder();
+		}
 	    }else{
-		neste.fyllUtDenneRutenOgResten();
+		neste.fyllUtDenneRutenOgResten(skrive);
 	    }
 	}else if(!harSattVerdi()){
 	    verdi=null;
 	    for(int i=0; i<muligeVerdier.length; i++){
-		/*		System.out.println("Hopper inn i forlokke gang nr: " + i);*/
+		/*              System.out.println("Hopper inn i forlokke gang nr: " + i);*/
 		if(muligeVerdier[i]!=null){
 		    verdi=muligeVerdier[i];
-		    //		    System.out.println("Satt verdi i rtNr " + ruteID + ": " + verdi);
+		    //              System.out.println("Satt verdi i rtNr " + ruteID + ": " + verdi);
 		    if(neste==null){
 			antallLosninger++;
+			if(!skrive){
+			    b.printBrettAlternativ();
+			}else{
+			    b.leggTilISudokuBeholder();
+			}
 		    }else{
-			neste.fyllUtDenneRutenOgResten();
+			neste.fyllUtDenneRutenOgResten(skrive);
 		    }
 		    verdi=null;
 		}
 	    }
 	}
-	//	System.out.println("Er ferdig, backtracer");
+	//      System.out.println("Er ferdig, backtracer");
     }
-    /*
-      public boolean fyllUtDenneRutenOgResten(){
-      System.out.println("ER INNE I FYLLUT");
-      if(finnMuligeTall()==null){}
-
-      System.out.println("Boooo");
-      if(!harSattVerdi() && finnesMuligeVerdier()){
-      System.out.println("forste iftest");
-      while(arrayTeller<muligeVerdier.length){
-      if(muligeVerdier[arrayTeller]!=null){
-      verdi = muligeVerdier[arrayTeller];
-      break;
-      }
-      arrayTeller++;
-      }
-      if(arrayTeller==muligeVerdier.length){
-      System.out.println("andre iftest");
-      verdi=null;
-      arrayTeller=0;
-      return false;
-      }
-      }else if(!finnesMuligeVerdier()){
-      return false;
-      }
-
-      if(neste==null){
-      System.out.println("tredje iftest");
-      System.out.println("HAR LOST BRETTET");
-      }
-
-      if(!neste.fyllUtDenneRutenOgResten()){
-      System.out.println("fjerde iftest");
-      if(!harSattVerdi() && !finnesMuligeVerdier()){
-      System.out.println("femte iftest");
-      verdi = null;
-      arrayTeller=0;
-      return false;
-      }else if(!harSattVerdi() && finnesMuligeVerdier){
-      while(arrayTeller<muligeVerdier.length){
-      if(muligeVerdier[arrayTeller]!=null){
-      verdi = muligeVerdier[arrayTeller];
-      break;
-      }
-      arrayTeller++;
-      }
-      neste.fyllUtDenneRutenOgResten();
-      }else if(harSattVerdi()){
-      System.out.println("sjette iftest");
-      return false;
-      }
-      }
-      return true;
-      }
-    */
 }

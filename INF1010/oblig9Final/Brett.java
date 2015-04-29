@@ -12,6 +12,13 @@ public class Brett{
     private Beholder[] bokser;
     private Rute[] ruter;
     private int ruteArrayTeller=0;
+    private SudokuBeholder SudBeh;
+    private boolean skrive;
+
+    Brett(SudokuBeholder s, boolean skrive){
+	SudBeh = s;
+	this.skrive = skrive;
+    }
 
     public void lesFil(String filnavn) throws Exception{
 	in = new Scanner(new File(filnavn));
@@ -121,6 +128,32 @@ public class Brett{
 	    rader[i].printBeholder();
 	    System.out.println();
 	}
+	System.out.println();
+    }
+
+    public void leggTilISudokuBeholder(){
+	String[] losningsrader = new String[lengdeFinal];
+	for(int i=0; i<rader.length; i++){
+	    losningsrader[i] = rader[i].lagString();
+	}
+
+	SudBeh.settInn(losningsrader);
+    }
+
+    public void printBrettAlternativ(){
+	for(int i=0; i<rader.length; i++){
+	    rader[i].printBeholder();
+	    System.out.print("//");
+	}
+	System.out.println();
+    }
+
+    public void skrivTilFil(){
+	SudBeh.skrivTilFil();
+    }
+
+    public int hentAntallLosninger(){
+	return SudBeh.antallLosninger();
     }
     
     public void printKolonne(int i){
@@ -128,7 +161,7 @@ public class Brett{
     }
     
     public void startLosning(){
-	ruter[0].fyllUtDenneRutenOgResten();
+	ruter[0].fyllUtDenneRutenOgResten(skrive);
     }
     
 }

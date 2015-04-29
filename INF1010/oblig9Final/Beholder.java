@@ -16,6 +16,14 @@ public class Beholder{
 	}
     }
 
+    public String lagString(){
+	String tmp = "";
+	for(int i=0; i<ruter.length; i++){
+	    tmp += ruter[i];
+	}
+	return tmp;
+    }
+
     public Rute hentRute(int i){
 	return ruter[i];
     }
