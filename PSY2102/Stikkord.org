@@ -65,18 +65,18 @@
        - Use example of time mapped into our spatial dimensions
        - Also use smell example, Lee and Schwarz found that smell influences suspicion
     5) inherited association: got no fucking clue (yet), considering to just leave it out, and explain metaphoric and direct
-*** TODO Assosiasjoner
-    1. grinding someone + collision
-       - mental presentation + grinding
-    2. plane model + presentation
-       - anal + body builder
-       - rain + physics
-    3. 
-       - apple falling
-       - judge judy
-    4. 
-       - timeshower + someone walking around a room
-       - fishy + bruce lee + scwarznegger
+**** TODO Assosiasjoner
+     1. grinding someone + collision
+       	- mental presentation + grinding
+     2. plane model + presentation
+       	- anal + body builder
+       	- rain + physics
+     3. 
+       	- apple falling
+       	- judge judy
+     4. 
+       	- timeshower + someone walking around a room
+       	- fishy + bruce lee + scwarznegger
 
 ** DONE Question 3
    - What predictions does the embodiment account make - how can it be tested whether a concept is embodied? 
@@ -95,20 +95,20 @@
     5. clipboard
     6. book weighing heavily
        * need to know something to rely on embodied concepts
-*** DONE Assosiasjoner
-    1. mental presentation
-       * cone symbol + blinking X
-    2. Ass vs. embrace
-       * groot from guardians of the galaxy
-    3. interference on a screen
-       * a barstool
-    4. predator
-       * poop + sizzling
-       * abdominals -> physics
-    5. clipboard
-    6. someone trying to lift a heavy book
-       
-       
+**** DONE Assosiasjoner
+     1. mental presentation
+       	* cone symbol + blinking X
+     2. Ass vs. embrace
+       	* groot from guardians of the galaxy
+     3. interference on a screen
+       	* a barstool
+     4. predator
+       	* poop + sizzling
+       	* abdominals -> physics
+     5. clipboard
+     6. someone trying to lift a heavy book
+       	
+       	
 * TODO Module 4
 ** Question 1
    - Give some examples of framing effects
@@ -141,10 +141,25 @@
        - Lack of caring for out of own country
        - Stereotyping
        - Risky behaviour
+**** Assosiasjoner
+     1. perpendicular
+       	- concrete vs abdominals
+     2. high level
+       	- abdominals
+     3. Low level
+       	- concrete
+     4. playin catch
+     5. tempo il gante
+     6. spatula
+     7. Lots of people talking in group
+     8. Hypothermic
+     9. P = VI
+       	- falling
+       	- discovery
+       	- turning the other cheek
+       	- stereo blasting music
+       	- rice cooking
       
-* Hindsight bias
-  -
-
 * Reiserute
 ** 
    
