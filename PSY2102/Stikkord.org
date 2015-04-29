@@ -34,7 +34,6 @@
 ** DONE Question 8
    - How does havinga negative attitude towards someone influence facial responses to facial emotional
    expressions of that person? (Bestemor/bestefar på andre sia)
-
    
 * DONE Module 2
 
@@ -112,6 +111,9 @@
 * TODO Module 4
 ** Question 1
    - Give some examples of framing effects
+*** Stikkord
+    - 
+
 
 ** Question 2
 *** Stikkord
