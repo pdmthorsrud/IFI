@@ -108,7 +108,7 @@
      6. someone trying to lift a heavy book
        	
        	
-* TODO Module 4
+* TODOo Module 4
 ** Question 1
    - Give some examples of framing effects
 *** Stikkord
@@ -121,7 +121,7 @@
 ** Question 4
    - Discuss the concept “psychological distance” and give some examples of how it can affect judgments and decisions
 
-*** Stikkord
+*** DONE Stikkord
     1. Perceived distance
        - Concrete vs abstract
        - Temporal
@@ -143,7 +143,7 @@
        - Lack of caring for out of own country
        - Stereotyping
        - Risky behaviour
-**** Assosiasjoner
+**** DONE Assosiasjoner
      1. perpendicular
        	- concrete vs abdominals
      2. high level
