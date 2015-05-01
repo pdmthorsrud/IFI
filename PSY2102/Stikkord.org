@@ -67,14 +67,14 @@
 **** TODO Assosiasjoner
      1. grinding someone + collision
        	- mental presentation + grinding
-     2. plane model + presentation
+     2. model + presentation
        	- anal + body builder
        	- rain + physics
-     3. 
-       	- apple falling
+     3. Directory 
+       	- apple + xpeke
        	- judge judy
-     4. 
-       	- timeshower + someone walking around a room
+     4. Heavy metal, maple syrup
+       	- timeshower + spatula
        	- fishy + bruce lee + scwarznegger
 
 ** DONE Question 3
@@ -108,17 +108,58 @@
      6. someone trying to lift a heavy book
        	
        	
-* TODOo Module 4
-** Question 1
+* TODO Module 4
+** DONE Question 1
    - Give some examples of framing effects
 *** Stikkord
-    - 
+    1. Framing effects are mentioned when talking about judgemet and decisions
+    2. Different ways of phrasing something (you WIN 50% vs. you LOSE 50%)
+    3. Manifest in many differet ways
+    4. Common that they violate some of the key principles in normative, economical theories
+       - indifference
+       - priciple of consistency
+       - principle of coherence
+    5. Twersky and Kahneman
+       - one framing effect
+       - example of attribute framing
+    6. Disease, 600 people will die (if nothig done)
+       1. A = 200 people saved
+       2. B = 1/3 600 saved, 2/3 0 saved
+       3. C = 400 people die
+       4. D = 1/3 nobody dies, 2/3 everyone dies
+       5. Should have nothing to say (Indifference)
+       6. A over B, D over C
+       7. Reason: risk aversion
+	  - Avoid risk when gain is at stake
+    7. Attribute framing
+       1. 95% fatfree vs 5% fat
+       2. A over B
+       3. Bias towards desirable traits
+       4. Weber's law of psychophysics
+	  + The same difference is perceived as greater if the numbers are low
+**** Assosiasjoner
+     1. a big ass frame
+     2. human split in half, one happy, one sad
+     3. many maniacs
+     4. Normal girl, Ecco shoes
+	- indie musician
+	- concert
+	- plus and minus together (makes sense)
+     5. Twerking and djengis khan
+     6. 
+	- ABCD
+	- indie musician
+	- A above B, D above C
+	- reading: Rice Avengers
+     7. 
+	- very skinny vs very fat
+	- desintigrate
+	- spiderweb psychopath 
 
-
-** Question 2
+** TODO Question 2
 *** Stikkord
-** Question 3
-** Question 4
+** TODO Question 3
+** DONE Question 4
    - Discuss the concept “psychological distance” and give some examples of how it can affect judgments and decisions
 
 *** DONE Stikkord
@@ -161,7 +202,7 @@
        	- turning the other cheek
        	- stereo blasting music
        	- rice cooking
-      
+	  
 * Reiserute
 ** 
    
