@@ -43,7 +43,18 @@
    Compare the idea of modal mental representations to the idea of amodal mental representations in associative networks. 
    Illustrate this with an example.
 *** Stikkord
-    - 
+    - embodied cognition/grounded cognition
+      - Everything is grounded in the sensory
+    - modal vs amodal representations
+      - Traditional: amodal system in a modul based system
+      - computer
+      - body and mind divided
+    - Embodied cognition
+      - one system
+      - grounded in our sensory and motoric behaviour
+      - Barsaoulu
+	- when we think of something we reactivate the places used to experience in the first place
+	- Torskerogn
     
 ** TODO Question 2
    - How could modal representations develop? Describe at least 2 different accounts, and name examples of embodied concepts for each
@@ -76,7 +87,8 @@
      4. Heavy metal, maple syrup
        	- timeshower + spatula
        	- fishy + bruce lee + scwarznegger
-
+     5. 
+	  
 ** DONE Question 3
    - What predictions does the embodiment account make - how can it be tested whether a concept is embodied? 
    Name at least 2 methods, and describe one in more detail with an example study.
