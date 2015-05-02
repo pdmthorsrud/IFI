@@ -56,7 +56,7 @@
 	- when we think of something we reactivate the places used to experience in the first place
 	- Torskerogn
     
-** TODO Question 2
+** DONE Question 2
    - How could modal representations develop? Describe at least 2 different accounts, and name examples of embodied concepts for each
 *** DONE Stikkord
     1) Grounded cognition
@@ -75,7 +75,7 @@
        - Use example of time mapped into our spatial dimensions
        - Also use smell example, Lee and Schwarz found that smell influences suspicion
     5) inherited association: got no fucking clue (yet), considering to just leave it out, and explain metaphoric and direct
-**** TODO Assosiasjoner
+**** DONE Assosiasjoner
      1. grinding someone + collision
        	- mental presentation + grinding
      2. model + presentation
@@ -84,10 +84,9 @@
      3. Directory 
        	- apple + xpeke
        	- judge judy
-     4. Heavy metal, maple syrup
+     4. Metal
        	- timeshower + spatula
        	- fishy + bruce lee + scwarznegger
-     5. 
 	  
 ** DONE Question 3
    - What predictions does the embodiment account make - how can it be tested whether a concept is embodied? 
@@ -97,27 +96,27 @@
        * cognitive symbols that represent the external reality
     2. Associative network vs embodiment account
        * Root/branch
-    3. interference experiment
+       * interference experiment
        * Stoop effect
-    4. predictions:
+    3. predictions:
        * power and size
        * every concept that has a physical part explaining something abstract,
 	 could be influenced by adding that physical part to said concept.
-    5. clipboard
-    6. book weighing heavily
+    4. clipboard
+    5. book weighing heavily
        * need to know something to rely on embodied concepts
 **** DONE Assosiasjoner
      1. mental presentation
        	* cone symbol + blinking X
      2. Ass vs. embrace
        	* groot from guardians of the galaxy
-     3. interference on a screen
+	* interference on a screen
        	* a barstool
-     4. predator
+     3. predator
        	* poop + sizzling
        	* abdominals -> physics
-     5. clipboard
-     6. someone trying to lift a heavy book
+     4. clipboard
+     5. someone trying to lift a heavy book
        	
        	
 * TODO Module 4
@@ -154,16 +153,16 @@
      2. human split in half, one happy, one sad
      3. many maniacs
      4. Normal girl, Ecco shoes
-	- indie musician
+	- Fez (INDIE)
 	- concert
 	- plus and minus together (makes sense)
      5. Twerking and djengis khan
-     6. 
+     6. dismantle
 	- ABCD
-	- indie musician
+	- fez (INDIE)
 	- A above B, D above C
 	- reading: Rice Avengers
-     7. 
+     7. attorney
 	- very skinny vs very fat
 	- desintigrate
 	- spiderweb psychopath 
@@ -197,18 +196,14 @@
        - Stereotyping
        - Risky behaviour
 **** DONE Assosiasjoner
-     1. perpendicular
-       	- concrete vs abdominals
-     2. high level
-       	- abdominals
-     3. Low level
-       	- concrete
-     4. playin catch
-     5. tempo il gante
-     6. spatula
-     7. Lots of people talking in group
-     8. Hypothermic
-     9. P = VI
+     1. high level + abdominals
+     2. Low level + concrete
+     3. playing catch
+     4. tempo il gante
+     5. spatula
+     6. Lots of people talking in group
+     7. Hypothermic
+     8. P = VI
        	- falling
        	- discovery
        	- turning the other cheek
