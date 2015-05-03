@@ -15,7 +15,7 @@
    - semiconductors: a small amount of free electrons
    - insulators: no free electrons in strcuture
    - 
-
+     
 ** 2
 
    - Coloumbs law: A force (F) exists between two point-source charges (Q1, Q2) that is directly proportional to the product of the two charges
@@ -82,3 +82,31 @@
 ** 3
 
    - Stiff voltage divider:  the load resistor is at least ten times larger than the divider resistors.
+** 5
+   - Forskjellige wheatstone broer: s. 251
+
+* Kapittel 8
+
+** 1
+
+   - 
+
+** 2
+
+** 3
+
+** 4
+
+** 5
+
+** 6
+
+** 7
+
+** 8
+
+   - Rise time: is the time required for the pulse to go from 10% of its amplitucde to 90% of its amplitude
+   - Fall time: is the time required for the pulse to go from 90% of its amplutde to 10% of its amplitude
+   - Pulse width: the time between the point on the leading edge where the value is 50% of the amplitude and the point on the trailing edge where the value is 50% of the amplitude
+   - Lese om andre typer bølgeformer: s.370
+     - 
