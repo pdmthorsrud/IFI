@@ -1,0 +1,84 @@
+
+* Lover og formler
+
+  - Q(charge) = number of electrons/6.25*e18 electrons/C
+  - Kirchoffs spenningslow: the sum of all the voltage drops around a single closed path in a circuit is equals to the total srouce voltage in that closed path
+  - Kirchoffs strømlov: The sum of the currents into a node is equal to the sum of the currents out of that node
+
+
+* Kapittel 2
+
+** 1
+
+   - valence electron: outermost electron
+   - conductors: many free electrons
+   - semiconductors: a small amount of free electrons
+   - insulators: no free electrons in strcuture
+   - 
+
+** 2
+
+   - Coloumbs law: A force (F) exists between two point-source charges (Q1, Q2) that is directly proportional to the product of the two charges
+     and inviresely proportional to the square of the distance (d) between the charges
+
+** 3
+
+   - V = W/Q
+   - In a practical DC signal the signal will decrease slightly after some time
+   - Battery: converts chemical energy directly into electrical energy
+   - 
+
+** 4
+
+   - Current: rate of flow of charge
+   - One ampere: The amount of current that exists when a number of electrons having a total charge of one coulomb move through a given cross-section area in once second
+   - in practical current source the signal will decrease slightly after some time
+   
+** 5
+
+   - Resistance: athe opposition to current
+   - konduktans: G = 1/R
+   - For farge på resistor: s. 43
+   - potentiometer: brukt til å dele spenning
+   - rheostat: brukt til å dele strøm
+   - For brytere: s. 49
+   - COM/COMM = ground
+
+* Kapittel 3
+
+** 1
+
+** 2
+
+** 3
+
+** 4
+
+** 5
+
+   - Power rating: maximum amount of power that a resistor can dissipate without being damaged by excessive heat buildup
+   - 
+     
+* Kapittel 4
+
+** 6
+
+   - Kirchoffs spenningslow: the sum of all the voltage drops around a single closed path in a
+     circuit is equal to the total source voltage in that closed path
+   - 
+
+** 8
+
+   - The total amount of power in a series resistive circuit is equal to the sum of the powers in each resistor in series
+
+* Kapittel 5
+
+** 5:
+
+   - Node: any point or junction in a circuit where two or more components are connected
+
+* Kapittel 6
+
+** 3
+
+   - Stiff voltage divider:  the load resistor is at least ten times larger than the divider resistors.
