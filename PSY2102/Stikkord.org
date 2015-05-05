@@ -3,6 +3,22 @@
    - Explain feature-based stereotyping! Can you think of an example of the same process at work here in Norway?
      (Hjemme på Hen)
 
+   - bias, forklar biaser		bias/bie
+   - kroppslige trekk/ansiktstrekk	trekk/star trekMODUL 1
+   - Studie av dommer i USA
+   - mer afrikanske trekk = kraftigere dom 	sterkt afroamerikansk, sterk dom
+   - Dess mer stereotypiske svarte trekk, dess sannere er stereotypen. Finnes ikke I mellom gruppene, men 
+     kun innenfor gruppene (svarte med sterkere trekk, bedømmet mer stereotypisk enn andre svarte. 
+     Samme med hvite med svarte trekk)likner stereotype = bedømmet som mer riktig/sterk afroamerikansk
+   - biasen skjer unconcious no control/no konto bie
+   - Årsak til hvorfor:
+   - skjemaer		skjemaer//skjermer
+   - Diskusjon hva som hadde skjedd med samme I Norge
+   - USA lang erfaring med afroamerikanere, og afrikanske
+   - ikke lenger forskjell på dom for svarte og hvite, diskutere også hvorvidt feature-based stereotyping kan bli borte ved å sette fokus på dette hos dommerne.		Focus/fokusering
+   - interresant å tenke på om det er noen bias FØR man kommer inn I rettssystemet	bias  FØR/bie
+
+
 ** DONE Question 2
    - What can we assess with the who-said-what paradigm and how can this be achieved?
      (Kringsjå)
@@ -166,8 +182,10 @@
 	- very skinny vs very fat
 	- desintigrate
 	- spiderweb psychopath 
-
+	  
 ** TODO Question 2
+
+   - Discuss differences between System 1- and System 2-thinking
 *** Stikkord
 ** TODO Question 3
 ** DONE Question 4
