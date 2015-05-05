@@ -1,3 +1,4 @@
+
 * DONE Module 1 
 ** DONE Question 1
    - Explain feature-based stereotyping! Can you think of an example of the same process at work here in Norway?
@@ -133,8 +134,7 @@
        	* abdominals -> physics
      4. clipboard
      5. someone trying to lift a heavy book
-       	
-       	
+       	       	
 * TODO Module 4
 ** DONE Question 1
    - Give some examples of framing effects
@@ -228,6 +228,8 @@
        	- stereo blasting music
        	- rice cooking
 	  
+
+
 * Reiserute
 ** 
    
