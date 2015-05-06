@@ -68,8 +68,11 @@
       - computer
       - body and mind divided
       - Associative networks
-	- Everything bound together by absstract symbols torn away from the external world
-	- 
+	- Everything bound together by abstract symbols torn away from the external world
+	- Explains a lot of stuff concerning retrieval of memory etc. very well
+	- Some things associative cannot explain, however
+	  - Say whether a sentence makes sense or not by pulling a lever towards yourself, or pushing it from yourself
+	  - People made to move in a portly way, reports other people as having more traits of an overweight person
     - Embodied cognition
       - one system
       - grounded in our sensory and motoric behaviour
