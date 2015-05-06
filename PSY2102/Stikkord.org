@@ -67,6 +67,7 @@
       - Traditional: amodal system in a module based system
       - computer
       - body and mind divided
+      - Explain embodiment features as embodiments effects where these effect are simply linked to the
       - Associative networks
 	- Everything bound together by abstract symbols torn away from the external world
 	- Explains a lot of stuff concerning retrieval of memory etc. very well

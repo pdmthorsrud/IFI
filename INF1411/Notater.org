@@ -110,3 +110,7 @@
    - Pulse width: the time between the point on the leading edge where the value is 50% of the amplitude and the point on the trailing edge where the value is 50% of the amplitude
    - Lese om andre typer bølgeformer: s.370
      - 
+
+* Kapittel 9
+
+** 
