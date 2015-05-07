@@ -1,5 +1,5 @@
 
-* DONE Module 1 
+* DONE Modvule 1 
 ** DONE Question 1
    - Explain feature-based stereotyping! Can you think of an example of the same process at work here in Norway?
      (Hjemme på Hen)
@@ -22,6 +22,8 @@
 
 ** DONE Question 2
    - What can we assess with the who-said-what paradigm and how can this be achieved?
+     Why is categorization by sex automatic, but categorization by race not, according to evolutionary
+     psychology?
      (Kringsjå)
 
 ** DONE Question 3
