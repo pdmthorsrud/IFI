@@ -113,4 +113,11 @@
 
 * Kapittel 9
 
+** 6
+
+   - Reactive power is the rate at which a capacitor
+   - Capacitor applications: s. 437
+
+* Kapittel 10
+
 ** 

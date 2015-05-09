@@ -124,7 +124,7 @@
     2. Associative network vs embodiment account
        * Root/branch
        * interference experiment
-       * Stoop effect
+       * Stroop effect
     3. predictions:
        * power and size
        * every concept that has a physical part explaining something abstract,
