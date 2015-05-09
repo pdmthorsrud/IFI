@@ -50,6 +50,42 @@
    - When do people tend to mimic each other behaviorally? Explain what sorts of behavior can be mimicked!
    Should we train people to mimic?
 
+*** Stikkord
+
+    1. Behavioural mimicry: when two or more people engage in the same behaviour at the same time
+       - Verified by that people do the same, or similar act at a certain time, typically no longer than 3 to 5 seconds after
+    2. Mannerisms, gestures, postures, and other motor movements can all be mimicked
+    3. When do people tend to mimic each other?
+       - Pre-existing rapport
+       - Mimic a friend more than a stranger
+       - mimic likeable confederates more than less likeable
+	 - done research where person was presented as either open and honest, or closed and dishonest
+       - Mimic ingroup more than outgroup
+	 - even when such an arbitrary cue as sharing similar first names
+       - With a goal to affiliate with someone
+	 - people were primed with a goal to affiliate (either consciously or unconciously)
+	 - consciously: was told it was beneficial for the experiment if they got along with the confederate
+	 - unconsciously: primed with words like affiliate, friend and together before interacting with the confederate
+	 - no difference between conscious and unconscious
+       - Inidividual differences in prosocial orientation
+	 - People that are more prosocial, and more interdependent on society, show higher mimicry
+	   - This both when being primed, and when comparing cultures (Japan vs USA), regardless of race
+       - Similiarity
+	 - Mimics with similar opinions to their own (can be explain by in and outgroup as well)
+	 - Another forms of similarity: shared knowledge, stereotypes can be conceptualised as one form of shared knowledge
+       - Mood and emotion
+	 - Tend to mimic others more when we are happy (done by priming people to be happe or sad)
+	 - Interestingly there's one sad emotion that induces more mimicry. Guilt.
+	   - participant bumped into by a confederate, conferederate either takes responsibility, or blames the participant
+	   - Afterwards mimic a video more when they were blamed, and could not make amends with the confederate(he/she left immediately)
+    4. When do people NOT mimic each other (inhibitors)
+       - goal to disaffiliate
+    5. Consequences of mimicry
+       1) cognitive processing
+	  - people that are being mimicked tend to become more field dependent
+	  - Mimicked people also tend to be more conformative to their own stereotypes (women and african-american men did worse on maths test after being mimicked)
+	  - Mimicking increases persuasion and consumer behaviour
+	  - LINKE DET TIL EMBODIMENT (feeling of cold when being mimicked more or less than expected (something is "off", and social coldness)
 ** DONE Question 8
    - How does havinga negative attitude towards someone influence facial responses to facial emotional
    expressions of that person? (Bestemor/bestefar på andre sia)
