@@ -121,3 +121,24 @@
 * Kapittel 10
 
 ** 
+* Kapittel 11
+** 1
+   - Faradays lov: The amount of voltage induced in a coil is directly proportional to
+     to the rate of change of the magnetic field with respect to the coil
+   - Lenzs lov: When the current though a ocild changes and an induced voltage is created as a result of the changing magnetic field,
+     the direction of the induced coltage is such that it always opposes the change in current
+** 2
+   - Forskjellige inductors: s. 523
+** 4
+   - Time constant = L/R
+   - Exponential formulas to find instantenous values in an inductor: s. 533
+** 6 
+   - Inductor applications: s. 543
+* Kapittel 12
+** 8
+   - Inductor applications: s. 581
+* Kapittel 14
+** 1
+   - A series RC circuit in which the output voltage is taken across the capacitor is known as an integrator.
+* Kapittel 15
+** 
