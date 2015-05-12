@@ -1,4 +1,3 @@
-
 * DONE Module 1 
 ** DONE Question 1
    - Explain feature-based stereotyping! Can you think of an example of the same process at work here in Norway?
