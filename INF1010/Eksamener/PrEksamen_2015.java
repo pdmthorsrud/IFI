@@ -4,7 +4,7 @@ class Rute extends JPanel implements MouseListener{
     public static 
 
     
-    JLabel hull = null; //Objektet vi bruker for å visualisere hull eller brikke
+    JLabel hull = null; //Objektet vi bruker for aa visualisere hull eller brikke
     int kolonne;
     int rad;
     boolean opptatt;
@@ -12,7 +12,7 @@ class Rute extends JPanel implements MouseListener{
     
     ImageIcon brikkeB = new ImageIcon("blank.png"); //hull
     ImageIcon brikkeR = new ImageIcon("raud.png"); //raud
-    ImageIcon brikkeG = new ImageIcon("gronn.png"); //grønn
+    ImageIcon brikkeG = new ImageIcon("gronn.png"); //groenn
 
     Rute(int kolonne, int rad, Rute[][] ruteArray){
 	hull = new JLabel(brikkeB);
@@ -54,4 +54,51 @@ class firePR{
 	ramme.setVisible(true);
     }
     
+}
+
+
+
+
+
+
+
+//oppgave 4
+
+class Beholder<T>{
+
+    Node forst;
+    Node bakerst;
+
+    public void settInn(T t){
+	if(forst==null && bakerst==null){
+	    forst = new Node<T>(t);
+	    bakerst = forst;
+	}else if(forst==bakerst){
+	    if(forst.compareTo(t)<0){
+
+	    }
+	}
+	
+    }
+    
+
+    private class Node<T> implements Comparable<T>{
+
+	T data;
+	Node neste;
+
+	Node(T t){
+	    data = t;
+	}
+
+	public int compareTo(T t){
+	    return 0;
+	}
+
+    }
+
+
+
+
+
 }
