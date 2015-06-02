@@ -1,9 +1,13 @@
-public class Person implements Comparable{
+public class Person implements Comparable<String>{
 
     String id;
     
     public String id(){
 	return id;
+    }
+
+    Person(String s){
+	id = s;
     }
 
     public int compareTo(String s){
@@ -13,5 +17,4 @@ public class Person implements Comparable{
 	    return -1;
 	}
     }
-
 }
