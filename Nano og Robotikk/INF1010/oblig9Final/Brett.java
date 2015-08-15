@@ -1,0 +1,167 @@
+import java.util.*;
+import java.io.*;
+
+public class Brett{
+    Scanner in;
+    private int antRaderIBoks;
+    private int ruteID =0;
+    private int antKolonnerIBoks;
+    private int lengdeFinal;
+    private Beholder[] rader;
+    private Beholder[] kolonner;
+    private Beholder[] bokser;
+    private Rute[] ruter;
+    private int ruteArrayTeller=0;
+    private SudokuBeholder SudBeh;
+    private boolean skrive;
+
+    Brett(SudokuBeholder s, boolean skrive){
+	SudBeh = s;
+	this.skrive = skrive;
+    }
+
+    public void lesFil(String filnavn) throws Exception{
+	in = new Scanner(new File(filnavn));
+	String innlest;
+	antRaderIBoks = tryCatch();
+	System.out.println("AntRaderiBoks : " + antRaderIBoks);
+	antKolonnerIBoks = tryCatch();
+	System.out.println("AntKolonnerIBoks : " + antKolonnerIBoks);
+	lengdeFinal = antRaderIBoks * antKolonnerIBoks;
+	System.out.println("LengdeFinal : " + lengdeFinal);
+	
+	rader = new Beholder[lengdeFinal];
+	kolonner = new Beholder[lengdeFinal];
+	bokser = new Beholder[lengdeFinal];
+	ruter = new Rute[lengdeFinal*lengdeFinal];
+	opprettBeholdere(rader, lengdeFinal);
+	opprettBeholdere(kolonner, lengdeFinal);
+	opprettBeholdere(bokser, lengdeFinal);
+	System.out.println("Har opprettet rader, kolonner og bokser");
+
+	while(in.hasNextLine()){
+	    innlest = in.nextLine();
+	    String[] innlestRuter = innlest.split("");
+	    opprettRuter(lengdeFinal, innlestRuter);
+	}
+	System.out.println("Ferdig med opprettelse av ruter");
+	opprettNestepekere();
+    }
+
+    public void opprettBeholdere(Beholder[] beholder, int lengde){
+	for(int i=0; i<beholder.length; i++){
+	    beholder[i] = new Beholder(lengde);
+	}
+    }
+
+    public void startPekere(){
+	for(int i=0; i<ruter.length; i++){
+	    if(ruter[i].neste==null){
+		break;
+	    }
+	    System.out.println(ruter[i].neste);
+	}
+    }
+
+    public void printruterArray(){
+	for(int i=0; i<ruter.length; i++){
+	    System.out.println(ruter[i]);
+	}
+    }
+
+    public void opprettRuter(int lengde, String[] s){
+	for(int i=0; i<s.length; i++){
+	    if(s[i].equals(".")){		
+		ruter[ruteID] = new Rute(lengde, null, this, ruteID, antRaderIBoks, antKolonnerIBoks);
+		ruteID++;
+	    }else{
+		ruter[ruteID] = new Rute(lengde, s[i], this, ruteID, antRaderIBoks, antKolonnerIBoks);
+		ruteID++;
+	    }
+	}
+    }
+
+    public void opprettNestepekere(){
+	for(int i=0; i<ruter.length; i++){
+	    if(i==ruter.length-1){
+		ruter[i].neste = null;
+		return;
+	    }
+	    ruter[i].neste = ruter[i+1];
+	}
+    }
+
+    public void printAntallLosninger(){
+	System.out.println("Antall losninger: " + ruter[0].antallLosninger);
+    }
+    
+    public Beholder hentBeholder(int nr, String type){
+	if(type.equals("rad")){
+	    Beholder temp = rader[nr];
+	    return temp;
+	}else if(type.equals("kolonne")){
+	    return kolonner[nr];
+	}else if(type.equals("boks")){
+	    return bokser[nr];
+	}
+	return rader[0];
+    }
+
+    public int tryCatch(){
+	int s;
+	try{
+	    s = Integer.parseInt(in.nextLine());
+	    return s;
+	}catch(Exception e){
+	    System.out.println("Noe gikk galt");
+	    System.exit(1);
+	}
+	return 666;
+    }
+
+    public void printRuteRadNr(int radNr, int ruteNr){
+	rader[radNr].hentRute(ruteNr).printMuligeVerdier();
+    }
+
+    public void printBrett(){
+	for(int i=0; i<rader.length; i++){
+	    rader[i].printBeholder();
+	    System.out.println();
+	}
+	System.out.println();
+    }
+
+    public void leggTilISudokuBeholder(){
+	String[] losningsrader = new String[lengdeFinal];
+	for(int i=0; i<rader.length; i++){
+	    losningsrader[i] = rader[i].lagString();
+	}
+
+	SudBeh.settInn(losningsrader);
+    }
+
+    public void printBrettAlternativ(){
+	for(int i=0; i<rader.length; i++){
+	    rader[i].printBeholder();
+	    System.out.print("//");
+	}
+	System.out.println();
+    }
+
+    public void skrivTilFil(){
+	SudBeh.skrivTilFil();
+    }
+
+    public int hentAntallLosninger(){
+	return SudBeh.antallLosninger();
+    }
+    
+    public void printKolonne(int i){
+	kolonner[i].printBeholder();
+    }
+    
+    public void startLosning(){
+	ruter[0].fyllUtDenneRutenOgResten(skrive);
+    }
+    
+}
