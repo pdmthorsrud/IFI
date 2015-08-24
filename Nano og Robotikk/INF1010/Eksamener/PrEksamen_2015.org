@@ -1,0 +1,36 @@
+
+* Oppgave 1
+
+public class Person{
+}
+
+abstract public class Student extends Person{
+}
+
+public class MStud extends Student{
+}
+
+public class BStud extends Student{
+}
+
+public class AnsattBStud extends BStud implements Ansatt{
+}
+
+public class AnsattMStud extends MStud implements Ansatt{
+}
+
+public interface Ansatt{
+}
+
+public class Professor extends Person implements Ansatt{
+}
+
+* Oppgave 3
+
+** a
+
+class Rute extends JPanel implements MouseListener{
+
+}
+
+

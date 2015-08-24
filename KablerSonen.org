@@ -1,0 +1,7 @@
+* Ethernet: |||||||
+* Strømkabel: |||
+* DVI: |||
+* VGA: |
+* USB Type-B Arduino: ||||||||||||||||||||
+* USD Micro: ||
+* USB Extension: ||

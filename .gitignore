@@ -49,6 +49,7 @@ Temporary Items
 *.class
 *.dll
 *.exe
+*.jar
 *.o
 *.so
 
@@ -66,7 +67,10 @@ tags
 *.dmg
 *.gz
 *.iso
+<<<<<<< HEAD
 *.jar
+=======
+>>>>>>> 685e96aabcebd955643db79902db40162261dbe7
 *.rar
 *.tar
 *.zip
