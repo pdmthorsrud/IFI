@@ -25,43 +25,43 @@ public class Results {
     boolean participantMale;
 
     public void addLengthOfLine(int index, int length){
-        lengthOfLine.add(index, length);
+	lengthOfLine.add(index, length);
     }
-    
+
     public void addActualTimeMillis(int index, int time){
-        actualTimeMillis.add(index, time);
+	actualTimeMillis.add(index, time);
     }
-    
+
     public void addTimeMillis(int index, int time){
-        timeMillis.add(index, time);
+	timeMillis.add(index, time);
     }
-    
+
     public void setParticipantAge(int age){
-        participantAge = age;
+	participantAge = age;
     }
-    
+
     public void addHeightPlacement(int index, int height){
-        heightPlacement.add(index, height);
+	heightPlacement.add(index, height);
     }
-    
+
     public void addWidthPlacement(int index, int width){
-        widthPlacement.add(index, width);
+	widthPlacement.add(index, width);
     }
-    
+
     public void setParticipantMale(boolean male){
-        participantMale = male;
+	participantMale = male;
     }
-    
+
     public void writeResultsToFile(String userID) throws FileNotFoundException{
-        PrintWriter writer = new PrintWriter(userID+".txt");
-        
-        writer.println("UserID: " +userID);
-        writer.println("LengthOfLine|WidthPlacement|HeightPlacement|ActualTime|GuessedTime");
-        
-        for(int i=0; i<timeMillis.size(); i++){
-            writer.println(lengthOfLine.get(i) + "|" + widthPlacement.get(i) + "|" + heightPlacement.get(i) + "|" + actualTimeMillis.get(i) + "|" + timeMillis.get(i));
-            System.out.println(lengthOfLine.get(i) + "|" + widthPlacement.get(i) + "|" + heightPlacement.get(i) + "|" + actualTimeMillis.get(i) + "|" + timeMillis.get(i));
-        }
-        writer.close();
+	PrintWriter writer = new PrintWriter(userID+".txt");
+
+	writer.println("UserID: " +userID);
+	writer.println("LengthOfLine|WidthPlacement|HeightPlacement|ActualTime|GuessedTime");
+
+	for(int i=0; i<timeMillis.size(); i++){
+	    writer.println(lengthOfLine.get(i) + "|" + widthPlacement.get(i) + "|" + heightPlacement.get(i) + "|" + actualTimeMillis.get(i) + "|" + timeMillis.get(i));
+	    System.out.println(lengthOfLine.get(i) + "|" + widthPlacement.get(i) + "|" + heightPlacement.get(i) + "|" + actualTimeMillis.get(i) + "|" + timeMillis.get(i));
+	}
+	writer.close();
     }
 }
