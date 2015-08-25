@@ -42,7 +42,7 @@ public class StationaryLines extends Application {
     boolean programStarted = false;
     boolean allowToRun = false;
     boolean isHalfway = true;
-
+    
     ArrayList<Line> lines = new ArrayList<>();
     ArrayList<Long> times = new ArrayList<>();
     StopwatchThread sw = new StopwatchThread();
