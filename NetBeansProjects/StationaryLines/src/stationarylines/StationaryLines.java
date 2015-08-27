@@ -68,7 +68,7 @@ public class StationaryLines extends Application {
         scene = new Scene(root, 1920, 1080);
         Canvas canvas = new Canvas(1920, 1080);
         final GraphicsContext gc = canvas.getGraphicsContext2D();
-
+	
         //Textfield to enter the ID of participants, this textfield will be shown every time you start the program
         final TextField enterID = new TextField();
         enterID.setPromptText("Enter userID");
