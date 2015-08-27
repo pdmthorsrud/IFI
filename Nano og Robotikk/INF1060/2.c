@@ -1,14 +1,16 @@
 #include <stdio.h>
 
+char strgetc(char s[], int pos){
+  return s[pos];
+}
+
+
 int main(){
 
   char s[] = "Hei";
 
-  strgetc(s, 2);
+  printf("%c\n", strgetc(s, 2));
 
 }
 
 
-char strgetc(char s[], int pos){
-  return s[pos];
-}
