@@ -4,7 +4,7 @@ public class Main{
 
 
     public static void main(String[] args) {
-	String hei = "hei";
+	String hei = "lkhjueartwklhdsgfljkhsdfgkjh";
 	generateWordsWithHoles(hei);
     }
 
@@ -80,23 +80,16 @@ public class Main{
 
 	char[] emptyChar = new char[lengthOfChar];
 	char[] tmp = new char[lengthOfChar];
-	System.out.println("Length of all chars(except original): " + lengthOfChar);
-	System.out.println("Length of original: " + original.length);
-	System.out.println("Length of emptyChar: " + emptyChar.length);
-	System.out.println("Length of tmp: " + tmp.length);
 	ArrayList<char[]> wordsWithHoles = new ArrayList<char[]>();
 	int indeksForWord = 0;
 
-	for(int i=0; i<s.length(); i++){
+	for(int i=0; i<s.length()+1; i++){
 	    tmp = emptyChar.clone();
-	    System.out.println("Length of tmp: " + tmp.length);
 	    indeksForWord=0;
 	    for(int j=0; j<lengthOfChar; j++){
 		if(j!=i){
 		    tmp[j] = original[indeksForWord];
 		    indeksForWord++;
-		}else{
-		    tmp[j] = '0';
 		}
 	    }
 	    wordsWithHoles.add(tmp);
@@ -106,7 +99,7 @@ public class Main{
 	    String ord = new String(kar);
 	    System.out.println(ord);
 	}
-	return null;
+	return wordsWithHoles;
     }
 
 
