@@ -4,8 +4,8 @@ public class Main{
 
 
     public static void main(String[] args) {
-	String hei = "lkhjueartwklhdsgfljkhsdfgkjh";
-	generateWordsWithHoles(hei);
+	String hei = "hei";
+	generateLetterMissingWords(hei);
     }
 
 
@@ -54,24 +54,33 @@ public class Main{
 
     private static ArrayList<String> generateLetterMissingWords(String s){
 
-	char[] original = new char[s.length()];
-	for(int i=0; i<s.length(); i++){
+	ArrayList<char[]> wordsChar = generateWordsWithHoles(s);
+	ArrayList<String> wordsString = putInMissingLetter(wordsChar);
+	
+	return wordsString;
+    }
 
+    private static ArrayList<String> putInMissingLetter(ArrayList<char[]> words){
+        ArrayList<String> finalWords = new ArrayList<>();
+	int nullPointer=0;
+
+	for(char[] charArray: words){
+	    for(int i=0; i<charArray.length; i++){
+		if(charArray[i]==' '){
+		    nullPointer=i;
+		}
+	    }
+	    for(char traversingChar='a'; traversingChar<26; traversingChar++){
+		System.out.println("Hello");
+		charArray[nullPointer] = traversingChar;
+		finalWords.add(new String(charArray));
+	    }
 	}
-	char[] tmp;
-	ArrayList<String> words = new ArrayList<String>();
-	char traversingChar = 'a';
-	/*
-	  for(int i=0; i<original.length; i++){
-	  tmp = original.clone();
-	  traversingChar = 'a';
-	  for(int j=0; j<26; j++){
-	  tmp[i] = traversingChar;
-	  words.add(new String(tmp));
-	  traversingChar++;
-	  }
-	  }*/
-	return words;
+	
+	for(String h: finalWords){
+	    System.out.println(h);
+	}
+	return finalWords;
     }
 
     private static ArrayList<char[]> generateWordsWithHoles(String s){
@@ -90,19 +99,17 @@ public class Main{
 		if(j!=i){
 		    tmp[j] = original[indeksForWord];
 		    indeksForWord++;
+		}else{
+		    tmp[j] = ' ';
 		}
 	    }
 	    wordsWithHoles.add(tmp);
 	}
 
-	for(char[] kar: wordsWithHoles){
-	    String ord = new String(kar);
-	    System.out.println(ord);
-	}
 	return wordsWithHoles;
     }
 
-    
+
 
 
     private class Node{
