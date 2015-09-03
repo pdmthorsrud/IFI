@@ -56,12 +56,12 @@ public class Main{
 
 	ArrayList<char[]> wordsChar = generateWordsWithHoles(s);
 	ArrayList<String> wordsString = putInMissingLetter(wordsChar);
-	
+
 	return wordsString;
     }
 
     private static ArrayList<String> putInMissingLetter(ArrayList<char[]> words){
-        ArrayList<String> finalWords = new ArrayList<>();
+	ArrayList<String> finalWords = new ArrayList<>();
 	int nullPointer=0;
 
 	for(char[] charArray: words){
@@ -76,7 +76,7 @@ public class Main{
 		finalWords.add(new String(charArray));
 	    }
 	}
-	
+
 	for(String h: finalWords){
 	    System.out.println(h);
 	}
