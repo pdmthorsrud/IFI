@@ -8,11 +8,6 @@ public class Main{
 	generateLetterMissingWords(hei);
     }
 
-
-
-
-
-
     private static ArrayList<String> generateSwitchedWords(String s){
 	ArrayList<String> words = new ArrayList<>();
 	for(int i=0; i<s.length()-2; i++){
