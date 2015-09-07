@@ -2,8 +2,6 @@ import java.util.ArrayList;
 
 public class SimilarWords{
 
-
-
     private static ArrayList<String> generateSwitchedLetterWords(String s){
 	ArrayList<String> words = new ArrayList<>();
 	for(int i=0; i<s.length()-2; i++){
