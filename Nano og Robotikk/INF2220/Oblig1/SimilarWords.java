@@ -2,15 +2,43 @@ import java.util.ArrayList;
 
 public class SimilarWords{
 
-    private static ArrayList<String> generateSwitchedLetterWords(String s){
+    public static ArrayList<String> generateSimilarWords(String s){
+	ArrayList<String> finalWords = new ArrayList<>();
+	ArrayList<String> first = new ArrayList<>();
+	ArrayList<String> second = new ArrayList<>();
+	ArrayList<String> third = new ArrayList<>();	
+	
+	finalWords = generateSwitchedLetterWords(s);
+
+	first = generateLetterMissingWords(s);
+	mergeArrayLists(finalWords, first);
+
+	second = generateLetterAddedWords(s);
+	mergeArrayLists(finalWords, second);
+
+	third = generateLetterReplacedWords(s);
+	mergeArrayLists(finalWords, third);
+
+	return finalWords;
+	
+    }
+
+    public static ArrayList<String> mergeArrayLists(ArrayList<String> first, ArrayList<String> second){
+	for(String h : second){
+	    first.add(h);
+	}
+	return first;
+    }
+    
+    public static ArrayList<String> generateSwitchedLetterWords(String s){
 	ArrayList<String> words = new ArrayList<>();
 	for(int i=0; i<s.length()-2; i++){
 	    words.add(swap(i, i+1, s));
 	}
 	return words;
     }
-
-    private static String swap(int i, int j, String word){
+    
+    public static String swap(int i, int j, String word){
 	char[] wordArray = word.toCharArray();
 	char tmp = wordArray[i];
 	wordArray[i] = wordArray[j];
@@ -20,7 +48,7 @@ public class SimilarWords{
     }
 
 
-    private static ArrayList<String> generateLetterReplacedWords(String s){
+    public static ArrayList<String> generateLetterReplacedWords(String s){
 
 	char[] original = s.toCharArray();
 	char[] tmp;
@@ -39,9 +67,7 @@ public class SimilarWords{
 	return words;
     }
 
-
-
-    private static ArrayList<String> generateLetterMissingWords(String s){
+    public static ArrayList<String> generateLetterMissingWords(String s){
 
 	ArrayList<char[]> wordsChar = generateWordsWithHoles(s);
 	ArrayList<String> wordsString = putInMissingLetter(wordsChar);
@@ -50,7 +76,7 @@ public class SimilarWords{
 
     }
 
-    private static ArrayList<String> putInMissingLetter(ArrayList<char[]> words){
+    public static ArrayList<String> putInMissingLetter(ArrayList<char[]> words){
 	ArrayList<String> finalWords = new ArrayList<>();
 	int nullPointer=0;
 	//does two forloops for each of the words
@@ -69,14 +95,10 @@ public class SimilarWords{
 		traversingChar++;
 	    }
 	}
-	//prints out all the words in final words
-	for(String h: finalWords){
-	    System.out.println(h);
-	}
 	return finalWords;
     }
 
-    private static ArrayList<char[]> generateWordsWithHoles(String s){
+    public static ArrayList<char[]> generateWordsWithHoles(String s){
 	char[] original = s.toCharArray();
 	int lengthOfChar = s.length()+1;
 
@@ -102,8 +124,6 @@ public class SimilarWords{
 	return wordsWithHoles;
     }
 
-
-
     public static ArrayList<String> generateLetterAddedWords(String s){
 	ArrayList<String> finalWords = new ArrayList<>();
 	String word;
@@ -119,15 +139,6 @@ public class SimilarWords{
 	    }	    	    
 	}
 
-
-	for(String h: finalWords){
-	    System.out.println(h);
-	}
-
-
 	return finalWords;
     }
-
-    
-
 }

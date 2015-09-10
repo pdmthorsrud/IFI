@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class BinaryTree{
+public class BinaryTreeTest{
 
     Node root = null;
     ArrayList<Integer> treeDepths = new ArrayList<Integer>();
@@ -48,79 +48,6 @@ public class BinaryTree{
     }
 
 
-    public String search(String data){
-
-        Node currentNode = root;
-
-        while(currentNode!=null){
-            if(currentNode.getData().compareTo(data)==0){
-                return currentNode.data;
-            }else if(currentNode.getData().compareTo(data)<0){
-                currentNode=currentNode.right;
-            }else if(currentNode.getData().compareTo(data)>0){
-                currentNode=currentNode.left;
-            }
-        }
-        return null;
-    }
-
-    public ArrayList<String> findSimilarWords(String s){
-        SimilarWords sw = new SimilarWords();
-
-        ArrayList<String> finalWords = new ArrayList<String>();
-        finalWords = sw.generateSimilarWords(s);
-
-        return finalWords;
-    }
-
-    public void suggestSimilarWords(String s){
-        double startTime = System.currentTimeMillis();
-        double timeUsed;
-        ArrayList<String> allWords = new ArrayList<String>();
-        allWords = findSimilarWords(s);
-
-        ArrayList<String> suggestedWords = new ArrayList<String>();
-
-        for(String h: allWords){
-            if(search(h)!=null){
-                suggestedWords.add(h);
-            }
-        }
-        if(!suggestedWords.isEmpty()){
-            System.out.println("You might have spelled '" + s +"' wrong. Here are a few suggestions:");
-            for(String j : suggestedWords){
-                System.out.println(j);
-            }
-        }else{
-            System.out.println("There are no similar words in the dictionary");
-        }
-
-        timeUsed = System.currentTimeMillis() - startTime;
-
-        System.out.println("The search for similar words took " + (timeUsed) + " milliseconds, and found " + suggestedWords.size() + " appropriate words.");
-
-    }
-
-    public Node remove(String data, Node n){
-
-        if(n==null)
-            return null;
-
-        int comparedValue = data.compareTo(n.getData());
-
-        if(comparedValue<0){
-            n.left = remove(data, n.left);
-        }else if(comparedValue>0){
-            n.right = remove(data, n.right);
-        }else if(n.left!=null && n.right!=null){
-            n.data = findMin(n.right).getData();
-            n.right = remove(n.data, n.right);
-        }else{
-            n = (n.left!=null) ? n.left : n.right;
-        }
-        return n;
-    }
-
     public void findMaxDepth(Node n, int currDepth){
         if(n!=root){
             if(n!=null){
@@ -152,21 +79,21 @@ public class BinaryTree{
     public void findNodesPerDepth(Node n){
         findMaxDepth(root, 0);
         setNodesPerDepth();
-	traverseAllNodes(root, 0);
-	printNodesPerDepth();
+        traverseAllNodes(root, 0);
+        printNodesPerDepth();
     }
 
     public void printNodesPerDepth(){
-	for(int i=0; i<nodesPerDepth.length; i++){
-	    System.out.println("Depth " + i + " || " + nodesPerDepth[i]);
-	}
+        for(int i=0; i<nodesPerDepth.length; i++){
+            System.out.println("Depth " + i + " || " + nodesPerDepth[i]);
+        }
     }
 
     public void traverseAllNodes(Node n, int currDepth){
         if(n!=root){
             if(n!=null){
                 currDepth++;
-		nodesPerDepth[currDepth]++;
+                nodesPerDepth[currDepth]++;
                 traverseAllNodes(n.left, currDepth);
                 traverseAllNodes(n.right, currDepth);
             }
@@ -176,30 +103,14 @@ public class BinaryTree{
         }
     }
 
-    public void printAverageDepthOfNodes(){
-	int nbNodes=0;
-	int sum=0;
 
-	for(int i=0; i<nodesPerDepth.length; i++){
-	    nbNodes += nodesPerDepth[i];
-	    sum += (nodesPerDepth[i])*(i);
-	}
-	
-    }
-
-    public Node findMin(Node n){
-        while(n.left!=null){
-            n = n.left;
+    public void printAllDepths(){
+        for(int i: treeDepths){
+            System.out.println(i);
         }
-        return n;
     }
 
-    public Node findMax(Node n){
-        while(n.right!=null){
-            n = n.right;
-        }
-        return n;
-    }
+
 
     private class Node{
         String data;
