@@ -15,7 +15,7 @@ public class Main{
 	}
 	removeReInsert(bt);
 
-	bt.findNodesPerDepth(bt.root);
+	bt.printStatistics();
 
 	menu(bt);
 
@@ -25,18 +25,9 @@ public class Main{
 
     private static void removeReInsert(BinaryTree bt){
 
-	System.out.println("Searching for 'busybody' || " + bt.search("busybody"));
-	System.out.println("Searching for 'bladelike' || " + bt.search("bladelike"));
-	System.out.println("Searching for 'akiapmin' || " + bt.search("akiapmin"));
-
 	System.out.println("Removing 'busybody'");
 	bt.remove("busybody", bt.root);
 	System.out.println("Done removing 'busybody'");
-
-	System.out.println("Searching for 'busybody' || " + bt.search("busybody"));
-	System.out.println("Searching for 'busybodyism' || " + bt.search("busybodyism"));
-	System.out.println("Searching for 'campeau' || " + bt.search("campeau"));
-	System.out.println("Searching for 'calfish' || " + bt.search("calfish"));
 	System.out.println("Inserting 'busybody' || " + bt.insert("busybody"));
 	System.out.println("Searching for 'busybody' || " + bt.search("busybody"));
 
@@ -49,15 +40,12 @@ public class Main{
 	while(!enteredText.toLowerCase().equals("q")){
 	    System.out.println("\nPlease enter your searchword, then RET || 'q' to exit");
 	    enteredText = user.nextLine();
-	    System.out.println("Searching for '" + enteredText + "'");
-	    String searchResult = bt.search(enteredText);
-
-
-	    if(searchResult!=null){
-		System.out.println("Found: " + searchResult);
+	    if(!enteredText.toLowerCase().equals("q")){
+		bt.searchForWord(enteredText);
 	    }else{
-		System.out.println("'" + enteredText + "' does not exist");
-		bt.suggestSimilarWords(enteredText);
+		System.out.println("Exit");
+		bt.writeStatistics();
+		break;
 	    }
 	}
     }
