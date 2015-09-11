@@ -1,0 +1,99 @@
+Searching for 'busybody' || busybody
+Removing 'busybody'
+Done removing 'busybody'
+Inserting 'busybody' || true
+Searching for 'busybody' || busybody
+
+Please enter your searchword, then RET || 'q' to exit
+achiev
+Searching for 'achiev'
+'achiev' does not exist
+
+You might have spelled 'achiev' wrong. Here are a few suggestions:
+achieve
+achier
+
+The search for similar words took 6.234773 milliseconds, and found 2 appropriate words.
+
+Please enter your searchword, then RET || 'q' to exit
+achiese
+Searching for 'achiese'
+'achiese' does not exist
+
+You might have spelled 'achiese' wrong. Here are a few suggestions:
+achinese
+achieve
+achiest
+
+The search for similar words took 1.270513 milliseconds, and found 3 appropriate words.
+
+Please enter your searchword, then RET || 'q' to exit
+achievee
+Searching for 'achievee'
+'achievee' does not exist
+
+You might have spelled 'achievee' wrong. Here are a few suggestions:
+achieve
+achieve
+achieved
+achiever
+achieves
+
+The search for similar words took 1.992669 milliseconds, and found 5 appropriate words.
+
+Please enter your searchword, then RET || 'q' to exit
+ahcieve
+Searching for 'ahcieve'
+'ahcieve' does not exist
+
+There are no similar words in the dictionary
+
+The search for similar words took 0.993856 milliseconds, and found 0 appropriate words.
+
+Please enter your searchword, then RET || 'q' to exit
+q
+Printing statistics, then exiting: 
+
+Depth 0 || 0 nodes
+Depth 1 || 2 nodes
+Depth 2 || 4 nodes
+Depth 3 || 8 nodes
+Depth 4 || 16 nodes
+Depth 5 || 32 nodes
+Depth 6 || 64 nodes
+Depth 7 || 121 nodes
+Depth 8 || 218 nodes
+Depth 9 || 383 nodes
+Depth 10 || 628 nodes
+Depth 11 || 990 nodes
+Depth 12 || 1513 nodes
+Depth 13 || 2208 nodes
+Depth 14 || 2949 nodes
+Depth 15 || 3889 nodes
+Depth 16 || 4772 nodes
+Depth 17 || 5671 nodes
+Depth 18 || 6251 nodes
+Depth 19 || 6689 nodes
+Depth 20 || 6692 nodes
+Depth 21 || 6450 nodes
+Depth 22 || 5884 nodes
+Depth 23 || 5101 nodes
+Depth 24 || 4244 nodes
+Depth 25 || 3254 nodes
+Depth 26 || 2395 nodes
+Depth 27 || 1789 nodes
+Depth 28 || 1177 nodes
+Depth 29 || 705 nodes
+Depth 30 || 429 nodes
+Depth 31 || 236 nodes
+Depth 32 || 138 nodes
+Depth 33 || 60 nodes
+Depth 34 || 25 nodes
+Depth 35 || 9 nodes
+Depth 36 || 3 nodes
+
+The depth of the tree is: 36
+Average depth of all nodes: 19.650862011493487
+
+The alphabetically first word is: abactinally
+The alphabetically last words is: darndests
