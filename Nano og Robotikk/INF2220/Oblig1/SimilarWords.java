@@ -106,7 +106,7 @@ public class SimilarWords{
 	char[] tmp = new char[lengthOfChar];
 	ArrayList<char[]> wordsWithHoles = new ArrayList<char[]>();
 	int indeksForWord = 0;
-
+	
 	for(int i=0; i<s.length()+1; i++){
 	    tmp = emptyChar.clone();
 	    indeksForWord=0;
