@@ -65,12 +65,13 @@ public class BinaryTree{
 	int compareInt = currentNode.getData().compareTo(data);
 
 	while(currentNode!=null){
+	    compareInt = currentNode.getData().compareTo(data);
 	    if(compareInt==0){
 		return currentNode.data;
 	    }else if(compareInt<0){
-		currentNode=currentNode.right;
+		currentNode = currentNode.right;
 	    }else if(compareInt>0){
-		currentNode=currentNode.left;
+		currentNode = currentNode.left;
 	    }
 	}
 	return null;
@@ -138,7 +139,7 @@ public class BinaryTree{
     }
     //traverses down the whole tree, and makes sure that absolutely every node is visisted. If a node's depth is lower than the currently
     //deepest recorded depth it changed maxDepth to currDepth.
-    
+
     public void findMaxDepth(Node n, int currDepth){
 	if(n!=root){
 	    if(n!=null){
@@ -184,7 +185,7 @@ public class BinaryTree{
 	if(n!=root){
 	    if(n!=null){
 		currDepth++;
-		nodesPerDepth[currDepth]++;npp
+		nodesPerDepth[currDepth]++;
 		traverseAllNodes(n.left, currDepth);
 		traverseAllNodes(n.right, currDepth);
 	    }
@@ -208,14 +209,14 @@ public class BinaryTree{
 	averageDepthOfNodes = ((double)sum/nbNodes);
 	System.out.println("Average depth of all nodes: " + averageDepthOfNodes);
     }
-    
+
     public void printFirstAndLastWord(){
 	alphabeticallyFirst = findMin(root).data;
 	alphabeticallyLast = findMax(root).data;
 	System.out.println("\nThe alphabetically first word is: " + alphabeticallyFirst);
 	System.out.println("The alphabetically last words is: " + alphabeticallyLast);
     }
-    
+
     public void printStatistics(){
 	findNodesPerDepth(root);
 	printNodesPerDepth();

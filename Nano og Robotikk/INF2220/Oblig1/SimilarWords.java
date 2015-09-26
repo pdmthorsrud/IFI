@@ -107,7 +107,7 @@ public class SimilarWords{
 	ArrayList<char[]> wordsWithHoles = new ArrayList<char[]>();
 	int indeksForWord = 0;
 	
-	for(int i=0; i<s.length()+1; i++){
+	for(int i=0; i<lengthOfChar; i++){
 	    tmp = emptyChar.clone();
 	    indeksForWord=0;
 	    for(int j=0; j<lengthOfChar; j++){
@@ -120,7 +120,6 @@ public class SimilarWords{
 	    }
 	    wordsWithHoles.add(tmp);
 	}
-
 	return wordsWithHoles;
     }
 
@@ -138,7 +137,6 @@ public class SimilarWords{
 		finalWords.add(word);
 	    }	    	    
 	}
-
 	return finalWords;
     }
 }
