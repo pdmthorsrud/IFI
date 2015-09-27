@@ -5,6 +5,7 @@
 
 struct node{
   char *data;
+  int number;
   struct node *next;
 };
 
@@ -12,6 +13,7 @@ typedef struct node str_node;
 
 FILE *fr;
 str_node *first = NULL;
+int numberOfNodes=0;
 
 void readFile();
 void print();
@@ -25,7 +27,6 @@ int main(int argc, char *argv[]){
 void readFile(){
   fr = fopen("tresmaa.txt", "rt");
   char text[200];
-  str_node *tmp;
   str_node *curr = first;
 
   while((fgets(text, 200, fr))!=NULL){
@@ -34,36 +35,32 @@ void readFile(){
       curr = malloc(sizeof(str_node));
       curr->data = malloc(strlen(text)+1);
       curr->data = text;
+      printf("%d\n", curr->number);
       first = curr;
       printf("Printing text: %s", text);
       printf("Printing curr->data: %s\n", first->data);
     }else{
       printf("Reading rest of the lines\n");
-      tmp = curr;
-      tmp->next = curr;
+      curr = curr->next;
       curr = malloc(sizeof(str_node));
-      curr->data=malloc(strlen(text)+1);
+      curr->data = malloc(strlen(text)+1);
       curr->data = text;
       printf("Printing text: %s", text);
       printf("Printing curr->data: %s\n", curr->data);
     }
   }
-  if(curr==NULL){
-    printf("Curr er null her ogsaa");
-  }
   fclose(fr);
 }
 
 void print(){
-  printf("Hello, nr. 2");
+  printf("Hello, nr. 2\n");
   str_node *curr = first;
+  printf("%s\n", curr->data);
 
-  printf("Printing first->data: %s\n", first->data);
-  
-  //while(curr!=NULL){
-  //printf("%s\n",curr->data);
-  //curr = curr->next;
-  //}
-  
+  while(curr->number!=numberOfNodes){
+    printf("%s\n",curr->data);
+    curr = curr->next;
+  }
+
 
 }
