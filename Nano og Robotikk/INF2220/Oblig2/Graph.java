@@ -19,8 +19,6 @@ public class Graph{
 	noOfTasks = Integer.parseInt(in.nextLine());
 	tasksArray = new Task[noOfTasks];
 	
-	System.out.println(noOfTasks);
-
 
 	//moves the cursor down to first task
 	in.nextLine();
@@ -30,19 +28,29 @@ public class Graph{
 	for(int i=0; i<tasksArray.length; i++){
 	    read = in.nextLine();
 	    String[] taskInfo = read.split("[\\s,;\\n\\t]+");
-	    int[] edges = new int[taskInfo.length - 4];
+	    int[] edges = new int[taskInfo.length - 5];
+
+	    for(int j=0; j<taskInfo.length-5; j++){
+		edges[j] = Integer.parseInt(taskInfo[4+j]);
+	    }
 
 	    tasksArray[i] = new Task(Integer.parseInt(taskInfo[0]), taskInfo[1], Integer.parseInt(taskInfo[2]), Integer.parseInt(taskInfo[3]), edges);
 	    System.out.println("\n Adding new task, with info:");
 	    for(int j=0; j<taskInfo.length; j++){
 		System.out.print(" " + taskInfo[j]);
 	    }
-
 	}
-
     }
 
 
+    public void printAllTasks(){
+
+	for(int i=0; i<tasksArray.length; i++){
+	    System.out.println("\n Task number " + i + ": ");
+	    tasksArray[i].printTaskInfo();
+	}
+
+    }
 
 
 
@@ -59,6 +67,21 @@ public class Graph{
 	    this.time = time;
 	    this.staff = staff;
 	    this.edgesNo = edgesNo;
+	}
+
+	public void printTaskInfo(){
+	    System.out.println(" Name: " + name);
+	    System.out.println(" Time: " + time);
+	    System.out.println(" Staff: " + staff);
+
+	    System.out.println(" Dependencies: ");
+	    for(int i=0; i<edgesNo.length; i++){
+		System.out.println(" " + edgesNo[i]);
+	    }
+	}
+	
+	public void printID(){
+	    System.out.println(id);
 	}
     }
 }

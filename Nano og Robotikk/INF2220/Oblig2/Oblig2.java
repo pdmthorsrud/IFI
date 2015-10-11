@@ -6,9 +6,10 @@ public class Oblig2{
 	if(args.length==1){
 	    g.addAllTasks(args[0]);
 	}else{
-	    System.out.println("ERROR: Wrong no of arguments. Terminating program");
+	    System.out.println(" ERROR: Wrong no of arguments. Terminating program");
 	}
 
+	g.printAllTasks();
     }
 
 }
