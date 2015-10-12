@@ -64,7 +64,42 @@ public class Graph{
 	}
     }
 
+    public int findTotalTime(){
+	Task t = findLastTask();
+	int totalTime = t.getTime() + t.getEarliestStart();
+	System.out.println(" Totaltime: " + totalTime);
+	return totalTime;
+    }
 
+    public Task findLastTask(){
+	Task latestTask = tasksArray[1];
+	for(int i=2; i<tasksArray.length; i++){
+	    if(latestTask.getEarliestStart()<tasksArray[i].getEarliestStart()){
+		latestTask = tasksArray[i];
+	    }
+	}
+	return latestTask;
+    }
+    
+    public ArrayList<Task> findLastTasks(){
+	ArrayList<Task> lastTasks = new ArrayList<>();
+	for(int i=1; i<tasksArray.length; i++){
+	    if(tasksArray[i].getTasksThatDependsOnThisTask().size()==0){
+		lastTasks.add(tasksArray[i]);
+	    }
+	}
+	return lastTasks;
+    }
+
+    public void findLatestStartTimes(Task t, int time){
+	int latestStart = time-t.getTime();
+	int[] tmp = t.getDependentOn();
+	t.setLatestStart(latestStart);
+	for(int i = 0; i<tmp.length; i++){
+	    findLatestStartTimes(tasksArray[tmp[i]], latestStart);
+	}
+    }
+    
     public void searchLoop(Task t){
 	//a recursive method that uses DFS to 'traverse' my whole graph. If the method manages to visit
 	//a task that is already ongoing (it has been visited before, but is not done going through it's neighbour tasks
@@ -112,10 +147,6 @@ public class Graph{
 	    this.earliestStart = 0;
 	}
 
-	public void findEarliestStart(){
-
-	}
-
 	public void addAllDependencies(){
 	    for(int i=0; i<dependentOn.length; i++){
 		tasksArray[dependentOn[i]].addDependentTask(this.id);
@@ -124,6 +155,18 @@ public class Graph{
 
 	public ArrayList<Integer> getTasksThatDependsOnThisTask(){
 	    return tasksThatDependsOnThisTask;
+	}
+
+	public int getEarliestStart(){
+	    return earliestStart;
+	}
+
+	public int getLatestStart(){
+	    return latestStart;
+	}
+
+	public void setLatestStart(int time){
+	    latestStart = time;
 	}
 
 	public boolean done(){
@@ -158,6 +201,10 @@ public class Graph{
 	    return time;
 	}
 
+	public String getName(){
+	    return name;
+	}
+
 	public void printLoopInfo(){
 	    System.out.printf("-----------------------------------\n");
 	    System.out.println(" Task id: " + id);
@@ -171,6 +218,7 @@ public class Graph{
 	    System.out.println(" Time: " + time);
 	    System.out.println(" Staff: " + staff);
 	    System.out.println(" EarliestStart: " + earliestStart);
+	    System.out.println(" LatestStart: " + latestStart);
 
 	    System.out.println("\n Dependent on: ");
 	    if(dependentOn.length==0){
