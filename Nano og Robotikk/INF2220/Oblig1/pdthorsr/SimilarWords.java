@@ -6,8 +6,8 @@ public class SimilarWords{
 	ArrayList<String> finalWords = new ArrayList<>();
 	ArrayList<String> first = new ArrayList<>();
 	ArrayList<String> second = new ArrayList<>();
-	ArrayList<String> third = new ArrayList<>();	
-	
+	ArrayList<String> third = new ArrayList<>();
+
 	finalWords = generateSwitchedLetterWords(s);
 
 	first = generateLetterMissingWords(s);
@@ -20,7 +20,7 @@ public class SimilarWords{
 	mergeArrayLists(finalWords, third);
 
 	return finalWords;
-	
+
     }
 
     public static ArrayList<String> mergeArrayLists(ArrayList<String> first, ArrayList<String> second){
@@ -29,24 +29,23 @@ public class SimilarWords{
 	}
 	return first;
     }
-    
-    public static ArrayList<String> generateSwitchedLetterWords(String s){
-	ArrayList<String> words = new ArrayList<>();
-	for(int i=0; i<s.length()-2; i++){
-	    words.add(swap(i, i+1, s));
+
+    public static ArrayList<String> generateSwitchedLetterWords(String word){
+	char[] word_array = word.toCharArray();
+	char[] tmp;
+	ArrayList<String> words = new ArrayList<String>();
+	for(int i = 0; i < word_array.length - 1; i++){
+	    tmp = word_array.clone();
+	    words.add(swap(i, i+1, tmp));
 	}
 	return words;
     }
-    
-    public static String swap(int i, int j, String word){
-	char[] wordArray = word.toCharArray();
-	char tmp = wordArray[i];
-	wordArray[i] = wordArray[j];
-	wordArray[j] = tmp;
-
+    public static String swap(int a, int b, char[] word){
+	char tmp = word[a];
+	word[a] = word[b];
+	word[b] = tmp;
 	return new String(word);
     }
-
 
     public static ArrayList<String> generateLetterReplacedWords(String s){
 
@@ -106,7 +105,7 @@ public class SimilarWords{
 	char[] tmp = new char[lengthOfChar];
 	ArrayList<char[]> wordsWithHoles = new ArrayList<char[]>();
 	int indeksForWord = 0;
-	
+
 	for(int i=0; i<lengthOfChar; i++){
 	    tmp = emptyChar.clone();
 	    indeksForWord=0;
@@ -127,15 +126,15 @@ public class SimilarWords{
 	ArrayList<String> finalWords = new ArrayList<>();
 	String word;
 
-	
+
 	for(int i=0; i<s.length(); i++){
 	    if(i==0){
 		word = s.substring(i+1);
 		finalWords.add(word);
 	    }else{
-	        word = s.substring(0, i) + s.substring(i+1);
+		word = s.substring(0, i) + s.substring(i+1);
 		finalWords.add(word);
-	    }	    	    
+	    }
 	}
 	return finalWords;
     }
