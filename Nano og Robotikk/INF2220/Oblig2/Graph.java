@@ -8,6 +8,95 @@ public class Graph{
     int noOfTasks;
 
 
+    public void runEverything(String fileName) throws Exception{
+	addAllTasks(fileName);
+
+	System.out.println("\n Checking possibility of the project");
+	searchLoop(tasksArray[1]);
+	System.out.println("\n No loops were found. The project is possible. FULL SPEED AHEAD CAP'N!");
+
+	for(int i=1; i<tasksArray.length; i++){
+	    tasksArray[i].findEarliestStart(tasksArray[i], tasksArray[i], 0);
+	}
+
+	for(Task t: findTasksThatNooneDependsOn()){
+	    findLatestStartTimes(t, findTotalTime());
+	}
+
+	printAllTasks();
+
+	runProjectSimulation();
+    }
+
+    public void runProjectSimulation(){
+	int i = 0;
+	int currStaff=0;
+	HashMap<Integer, ArrayList<Task>> startTimes = makeHashMapWithStartTimes();
+	HashMap<Integer, ArrayList<Task>> finishingTimes = makeHashMapWithFinishingTimes();
+
+	while(i<findTotalTime()+1){
+	    if(startTimes.containsKey(i) || finishingTimes.containsKey(i)){
+		System.out.println("\n Time: " + i);
+		if(startTimes.containsKey(i)){
+		    for(Task t: startTimes.get(i)){
+			System.out.println(" Starting: " + t.getID());
+			currStaff+=t.getStaff();
+		    }
+		}else{
+		    System.out.println(" No new tasks have been started.");
+		}
+		if(finishingTimes.containsKey(i)){
+		    for(Task t: finishingTimes.get(i)){
+			System.out.println(" Finished: " + t.getID());
+			currStaff-=t.getStaff();
+		    }
+		}else{
+		    System.out.println(" No new tasks have been finished.");
+		}
+		System.out.println(" Current staff: " + currStaff);
+	    }
+	    i++;
+	}
+
+	System.out.println("\n WE'RE FINISHED CAP'N");
+	System.out.println("\n**** Shortest possible project execution is " + findTotalTime() + " ****");
+    }
+
+    public HashMap makeHashMapWithStartTimes(){
+	HashMap<Integer, ArrayList<Task>> tmpStartTimes = new HashMap<>();
+	int startTime;
+
+	for(int i=1; i<tasksArray.length; i++){
+	    startTime = tasksArray[i].getEarliestStart();
+	    if(!tmpStartTimes.containsKey(startTime)){
+		tmpStartTimes.put(startTime, new ArrayList<>());
+		tmpStartTimes.get(startTime).add(tasksArray[i]);
+	    }else{
+		tmpStartTimes.get(startTime).add(tasksArray[i]);
+	    }
+	}
+	return tmpStartTimes;
+    }
+
+    public HashMap makeHashMapWithFinishingTimes(){
+	HashMap<Integer, ArrayList<Task>> tmpFinishingTimes = new HashMap<>();
+	int startTime;
+	int finishingTime;
+
+	for(int i=1; i<tasksArray.length; i++){
+	    startTime = tasksArray[i].getEarliestStart();
+	    finishingTime = startTime + tasksArray[i].getTime();
+
+	    if(!tmpFinishingTimes.containsKey(finishingTime)){
+		tmpFinishingTimes.put(finishingTime, new ArrayList<>());
+		tmpFinishingTimes.get(finishingTime).add(tasksArray[i]);
+	    }else{
+		tmpFinishingTimes.get(finishingTime).add(tasksArray[i]);
+	    }
+	}
+	return tmpFinishingTimes;
+    }
+
     public void addAllTasks(String fileName) throws Exception{
 	Scanner in;
 	File file = new File(fileName);
@@ -62,12 +151,13 @@ public class Graph{
 	for(int i=1; i<tasksArray.length; i++){
 	    tasksArray[i].printTaskInfo();
 	}
+	System.out.println("-----------------------------------------------------------");
+	System.out.println(" Minimum project realization time: " + findTotalTime());
     }
 
     public int findTotalTime(){
 	Task t = findLastTask();
 	int totalTime = t.getTime() + t.getEarliestStart();
-	System.out.println(" Totaltime: " + totalTime);
 	return totalTime;
     }
 
@@ -80,8 +170,8 @@ public class Graph{
 	}
 	return latestTask;
     }
-    
-    public ArrayList<Task> findLastTasks(){
+
+    public ArrayList<Task> findTasksThatNooneDependsOn(){
 	ArrayList<Task> lastTasks = new ArrayList<>();
 	for(int i=1; i<tasksArray.length; i++){
 	    if(tasksArray[i].getTasksThatDependsOnThisTask().size()==0){
@@ -95,11 +185,12 @@ public class Graph{
 	int latestStart = time-t.getTime();
 	int[] tmp = t.getDependentOn();
 	t.setLatestStart(latestStart);
+	t.setSlack(latestStart-t.getEarliestStart());
 	for(int i = 0; i<tmp.length; i++){
 	    findLatestStartTimes(tasksArray[tmp[i]], latestStart);
 	}
     }
-    
+
     public void searchLoop(Task t){
 	//a recursive method that uses DFS to 'traverse' my whole graph. If the method manages to visit
 	//a task that is already ongoing (it has been visited before, but is not done going through it's neighbour tasks
@@ -130,7 +221,7 @@ public class Graph{
 	int id , time , staff;
 	String name;
 	boolean seen, ongoing, done;
-	int earliestStart, latestStart;
+	int earliestStart, latestStart, slack;
 	int cntPredecessors;
 	int[] dependentOn;
 	ArrayList<Integer> tasksThatDependsOnThisTask = new ArrayList<Integer>();
@@ -165,8 +256,20 @@ public class Graph{
 	    return latestStart;
 	}
 
+	public int getStaff(){
+	    return staff;
+	}
+
+	public int getID(){
+	    return id;
+	}
+
 	public void setLatestStart(int time){
-	    latestStart = time;
+	    this.latestStart = time;
+	}
+
+	public void setSlack(int slack){
+	    this.slack = slack;
 	}
 
 	public boolean done(){
@@ -219,6 +322,7 @@ public class Graph{
 	    System.out.println(" Staff: " + staff);
 	    System.out.println(" EarliestStart: " + earliestStart);
 	    System.out.println(" LatestStart: " + latestStart);
+	    System.out.println(" Slack: " + slack);
 
 	    System.out.println("\n Dependent on: ");
 	    if(dependentOn.length==0){
@@ -251,7 +355,7 @@ public class Graph{
 	    tasksThatDependsOnThisTask.add(no);
 	}
 	//goes through all tasks that a task is dependent on and adds it to a totaltime, this totaltime then gets checked
-	//to see if it is bigger than the totaltime of another route of tasks that the startTask is dependent on.
+	//to see if it is bigger than the totaltime of another route of tasks that the startTask is dependent on. Has a complexity of V^2
 	public void findEarliestStart(Task t, Task startTask, int totalTime){
 	    int[] tmp = t.getDependentOn();
 	    if(tmp.length==0){
