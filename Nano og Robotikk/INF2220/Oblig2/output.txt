@@ -1,0 +1,915 @@
+OUTPUT buildhouse2.txt:
+
+ Checking possibility of the project
+
+ A loop has been found! The project is not possible. Printing looped tasks' info, then terminating program
+-----------------------------------
+ Task id: 1
+ Name: Build-walls
+-----------------------------------
+ Task id: 2
+ Name: Build-roofs
+-----------------------------------
+ Task id: 3
+ Name: Put-on-wallpapers
+-----------------------------------
+ Task id: 6
+ Name: Make-floor
+-----------------------------------
+ Task id: 1
+ Name: Build-walls
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+OUTPUT buildhouse1.txt:
+
+ Checking possibility of the project
+
+ No loops were found. The project is possible. FULL SPEED AHEAD CAP'N!
+
+-----------------------------------------
+
+ Task id: 1
+ Name: Build-walls
+ Time: 4
+ Staff: 2
+ EarliestStart: 4
+ LatestStart: 4
+ Slack: 0
+
+ Dependent on: 
+ 5
+
+ Tasks dependent on this task: 
+ 2
+ 3
+
+-----------------------------------------
+
+ Task id: 2
+ Name: Build-roofs
+ Time: 6
+ Staff: 4
+ EarliestStart: 8
+ LatestStart: 8
+ Slack: 0
+
+ Dependent on: 
+ 1
+
+ Tasks dependent on this task: 
+ 3
+ 4
+ 7
+
+-----------------------------------------
+
+ Task id: 3
+ Name: Put-on-wallpapers
+ Time: 1
+ Staff: 2
+ EarliestStart: 14
+ LatestStart: 17
+ Slack: 3
+
+ Dependent on: 
+ 1
+ 2
+
+ Tasks dependent on this task: 
+ 8
+
+-----------------------------------------
+
+ Task id: 4
+ Name: Put-on-tiles
+ Time: 1
+ Staff: 3
+ EarliestStart: 14
+ LatestStart: 21
+ Slack: 7
+
+ Dependent on: 
+ 2
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 5
+ Name: Build-foundation
+ Time: 4
+ Staff: 2
+ EarliestStart: 0
+ LatestStart: 0
+ Slack: 0
+
+ Dependent on: 
+ I am a strong independent woman!
+
+ Tasks dependent on this task: 
+ 1
+ 6
+
+-----------------------------------------
+
+ Task id: 6
+ Name: Make-floor
+ Time: 2
+ Staff: 2
+ EarliestStart: 4
+ LatestStart: 12
+ Slack: 8
+
+ Dependent on: 
+ 5
+
+ Tasks dependent on this task: 
+ 7
+
+-----------------------------------------
+
+ Task id: 7
+ Name: Put-carpet-floor
+ Time: 4
+ Staff: 2
+ EarliestStart: 14
+ LatestStart: 14
+ Slack: 0
+
+ Dependent on: 
+ 6
+ 2
+
+ Tasks dependent on this task: 
+ 8
+
+-----------------------------------------
+
+ Task id: 8
+ Name: Move-in
+ Time: 4
+ Staff: 4
+ EarliestStart: 18
+ LatestStart: 18
+ Slack: 0
+
+ Dependent on: 
+ 3
+ 7
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------------------------
+
+ Minimum project realization time: 22
+
+ Time: 0
+ Starting: 5
+ No new tasks have been finished.
+ Current staff: 2
+
+ Time: 4
+ Starting: 1
+ Starting: 6
+ Finished: 5
+ Current staff: 4
+
+ Time: 6
+ No new tasks have been started.
+ Finished: 6
+ Current staff: 2
+
+ Time: 8
+ Starting: 2
+ Finished: 1
+ Current staff: 4
+
+ Time: 14
+ Starting: 3
+ Starting: 4
+ Starting: 7
+ Finished: 2
+ Current staff: 7
+
+ Time: 15
+ No new tasks have been started.
+ Finished: 3
+ Finished: 4
+ Current staff: 2
+
+ Time: 18
+ Starting: 8
+ Finished: 7
+ Current staff: 4
+
+ Time: 22
+ No new tasks have been started.
+ Finished: 8
+ Current staff: 0
+
+ WE'RE FINISHED CAP'N
+
+**** Shortest possible project execution is 22 ****
+
+////////////////////////////////////////////////////////////////////////////////////////////////
+
+OUTPUT buildrail.txt:
+
+ Checking possibility of the project
+
+ No loops were found. The project is possible. FULL SPEED AHEAD CAP'N!
+
+-----------------------------------------
+
+ Task id: 1
+ Name: Install-pavement
+ Time: 20
+ Staff: 10
+ EarliestStart: 186
+ LatestStart: 198
+ Slack: 12
+
+ Dependent on: 
+ 28
+ 29
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 2
+ Name: Install-railing
+ Time: 7
+ Staff: 10
+ EarliestStart: 5
+ LatestStart: 211
+ Slack: 206
+
+ Dependent on: 
+ 10
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 3
+ Name: Install-ticketmachine
+ Time: 1
+ Staff: 10
+ EarliestStart: 63
+ LatestStart: 217
+ Slack: 154
+
+ Dependent on: 
+ 8
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 4
+ Name: Paint-tower-1-with-arch
+ Time: 15
+ Staff: 6
+ EarliestStart: 119
+ LatestStart: 203
+ Slack: 84
+
+ Dependent on: 
+ 24
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 5
+ Name: Paint-tower-2
+ Time: 12
+ Staff: 6
+ EarliestStart: 124
+ LatestStart: 206
+ Slack: 82
+
+ Dependent on: 
+ 25
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 6
+ Name: Paint-trusses
+ Time: 27
+ Staff: 6
+ EarliestStart: 186
+ LatestStart: 191
+ Slack: 5
+
+ Dependent on: 
+ 28
+ 29
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 7
+ Name: Paint-cables-and-rods
+ Time: 18
+ Staff: 6
+ EarliestStart: 186
+ LatestStart: 200
+ Slack: 14
+
+ Dependent on: 
+ 28
+ 29
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------
+
+ Task id: 8
+ Name: Put-lane-tunnel-and-intersection
+ Time: 12
+ Staff: 7
+ EarliestStart: 51
+ LatestStart: 194
+ Slack: 143
+
+ Dependent on: 
+ 13
+ 15
+
+ Tasks dependent on this task: 
+ 3
+ 31
+
+-----------------------------------------
+
+ Task id: 9
+ Name: Setup-barrack
+ Time: 3
+ Staff: 10
+ EarliestStart: 0
+ LatestStart: 146
+ Slack: 146
+
+ Dependent on: 
+ I am a strong independent woman!
+
+ Tasks dependent on this task: 
+ 10
+ 11
+ 12
+ 14
+ 16
+ 17
+
+-----------------------------------------
+
+ Task id: 10
+ Name: Prepare-storage
+ Time: 2
+ Staff: 4
+ EarliestStart: 3
+ LatestStart: 209
+ Slack: 206
+
+ Dependent on: 
+ 9
+
+ Tasks dependent on this task: 
+ 2
+
+-----------------------------------------
+
+ Task id: 11
+ Name: Rig-ramspace-reinforcing
+ Time: 1
+ Staff: 4
+ EarliestStart: 3
+ LatestStart: 143
+ Slack: 140
+
+ Dependent on: 
+ 9
+
+ Tasks dependent on this task: 
+ 18
+ 19
+ 20
+
+-----------------------------------------
+
+ Task id: 12
+ Name: Build-tunnel
+ Time: 30
+ Staff: 12
+ EarliestStart: 3
+ LatestStart: 146
+ Slack: 143
+
+ Dependent on: 
+ 9
+
+ Tasks dependent on this task: 
+ 13
+
+-----------------------------------------
+
+ Task id: 13
+ Name: Clean-tunnel
+ Time: 18
+ Staff: 12
+ EarliestStart: 33
+ LatestStart: 176
+ Slack: 143
+
+ Dependent on: 
+ 12
+
+ Tasks dependent on this task: 
+ 8
+
+-----------------------------------------
+
+ Task id: 14
+ Name: Build-intersection
+ Time: 25
+ Staff: 12
+ EarliestStart: 3
+ LatestStart: 149
+ Slack: 146
+
+ Dependent on: 
+ 9
+
+ Tasks dependent on this task: 
+ 15
+
+-----------------------------------------
+
+ Task id: 15
+ Name: Clean-intersection
+ Time: 20
+ Staff: 12
+ EarliestStart: 28
+ LatestStart: 174
+ Slack: 146
+
+ Dependent on: 
+ 14
+
+ Tasks dependent on this task: 
+ 8
+
+-----------------------------------------
+
+ Task id: 16
+ Name: Build-towerfoundation-1
+ Time: 35
+ Staff: 12
+ EarliestStart: 3
+ LatestStart: 14
+ Slack: 11
+
+ Dependent on: 
+ 9
+
+ Tasks dependent on this task: 
+ 21
+
+-----------------------------------------
+
+ Task id: 17
+ Name: Build-towerfoundation-2
+ Time: 45
+ Staff: 12
+ EarliestStart: 3
+ LatestStart: 3
+ Slack: 0
+
+ Dependent on: 
+ 9
+
+ Tasks dependent on this task: 
+ 22
+
+-----------------------------------------
+
+ Task id: 18
+ Name: Make-armouring-tower-1
+ Time: 40
+ Staff: 4
+ EarliestStart: 4
+ LatestStart: 9
+ Slack: 5
+
+ Dependent on: 
+ 11
+
+ Tasks dependent on this task: 
+ 21
+
+-----------------------------------------
+
+ Task id: 19
+ Name: Make-armouring-tower-2
+ Time: 25
+ Staff: 4
+ EarliestStart: 4
+ LatestStart: 23
+ Slack: 19
+
+ Dependent on: 
+ 11
+
+ Tasks dependent on this task: 
+ 22
+
+-----------------------------------------
+
+ Task id: 20
+ Name: Make-armouring-arch
+ Time: 12
+ Staff: 4
+ EarliestStart: 4
+ LatestStart: 144
+ Slack: 140
+
+ Dependent on: 
+ 11
+
+ Tasks dependent on this task: 
+ 23
+
+-----------------------------------------
+
+ Task id: 21
+ Name: Encase-and-armour-tower-1
+ Time: 15
+ Staff: 5
+ EarliestStart: 44
+ LatestStart: 49
+ Slack: 5
+
+ Dependent on: 
+ 16
+ 18
+
+ Tasks dependent on this task: 
+ 24
+
+-----------------------------------------
+
+ Task id: 22
+ Name: Encase-and-armour-tower-2
+ Time: 16
+ Staff: 5
+ EarliestStart: 48
+ LatestStart: 48
+ Slack: 0
+
+ Dependent on: 
+ 17
+ 19
+
+ Tasks dependent on this task: 
+ 25
+
+-----------------------------------------
+
+ Task id: 23
+ Name: Encase-and-armour-arch
+ Time: 30
+ Staff: 5
+ EarliestStart: 16
+ LatestStart: 156
+ Slack: 140
+
+ Dependent on: 
+ 20
+
+ Tasks dependent on this task: 
+ 26
+
+-----------------------------------------
+
+ Task id: 24
+ Name: Cast-tower-1
+ Time: 60
+ Staff: 7
+ EarliestStart: 59
+ LatestStart: 64
+ Slack: 5
+
+ Dependent on: 
+ 21
+
+ Tasks dependent on this task: 
+ 4
+ 27
+
+-----------------------------------------
+
+ Task id: 25
+ Name: Cast-tower-2
+ Time: 60
+ Staff: 7
+ EarliestStart: 64
+ LatestStart: 64
+ Slack: 0
+
+ Dependent on: 
+ 22
+
+ Tasks dependent on this task: 
+ 5
+ 27
+
+-----------------------------------------
+
+ Task id: 26
+ Name: Cast-arch
+ Time: 20
+ Staff: 7
+ EarliestStart: 46
+ LatestStart: 186
+ Slack: 140
+
+ Dependent on: 
+ 23
+
+ Tasks dependent on this task: 
+ 31
+
+-----------------------------------------
+
+ Task id: 27
+ Name: Stretch-two-maincables
+ Time: 25
+ Staff: 10
+ EarliestStart: 124
+ LatestStart: 124
+ Slack: 0
+
+ Dependent on: 
+ 24
+ 25
+
+ Tasks dependent on this task: 
+ 28
+ 29
+
+-----------------------------------------
+
+ Task id: 28
+ Name: Build-truss-1-with-rods
+ Time: 30
+ Staff: 10
+ EarliestStart: 149
+ LatestStart: 156
+ Slack: 7
+
+ Dependent on: 
+ 27
+
+ Tasks dependent on this task: 
+ 1
+ 6
+ 7
+ 30
+
+-----------------------------------------
+
+ Task id: 29
+ Name: Build-truss-2-with-rods
+ Time: 37
+ Staff: 10
+ EarliestStart: 149
+ LatestStart: 149
+ Slack: 0
+
+ Dependent on: 
+ 27
+
+ Tasks dependent on this task: 
+ 1
+ 6
+ 7
+ 30
+
+-----------------------------------------
+
+ Task id: 30
+ Name: Cast-lane-on-truss
+ Time: 20
+ Staff: 7
+ EarliestStart: 186
+ LatestStart: 186
+ Slack: 0
+
+ Dependent on: 
+ 28
+ 29
+
+ Tasks dependent on this task: 
+ 31
+
+-----------------------------------------
+
+ Task id: 31
+ Name: Polish-lane-on-arch
+ Time: 12
+ Staff: 7
+ EarliestStart: 206
+ LatestStart: 206
+ Slack: 0
+
+ Dependent on: 
+ 30
+ 26
+ 8
+
+ Tasks dependent on this task: 
+ Sigh.. noone needs me
+
+-----------------------------------------------------------
+
+ Minimum project realization time: 218
+
+ Time: 0
+ Starting: 9
+ No new tasks have been finished.
+ Current staff: 10
+
+ Time: 3
+ Starting: 10
+ Starting: 11
+ Starting: 12
+ Starting: 14
+ Starting: 16
+ Starting: 17
+ Finished: 9
+ Current staff: 56
+
+ Time: 4
+ Starting: 18
+ Starting: 19
+ Starting: 20
+ Finished: 11
+ Current staff: 64
+
+ Time: 5
+ Starting: 2
+ Finished: 10
+ Current staff: 70
+
+ Time: 12
+ No new tasks have been started.
+ Finished: 2
+ Current staff: 60
+
+ Time: 16
+ Starting: 23
+ Finished: 20
+ Current staff: 61
+
+ Time: 28
+ Starting: 15
+ Finished: 14
+ Current staff: 61
+
+ Time: 29
+ No new tasks have been started.
+ Finished: 19
+ Current staff: 57
+
+ Time: 33
+ Starting: 13
+ Finished: 12
+ Current staff: 57
+
+ Time: 38
+ No new tasks have been started.
+ Finished: 16
+ Current staff: 45
+
+ Time: 44
+ Starting: 21
+ Finished: 18
+ Current staff: 46
+
+ Time: 46
+ Starting: 26
+ Finished: 23
+ Current staff: 48
+
+ Time: 48
+ Starting: 22
+ Finished: 15
+ Finished: 17
+ Current staff: 29
+
+ Time: 51
+ Starting: 8
+ Finished: 13
+ Current staff: 24
+
+ Time: 59
+ Starting: 24
+ Finished: 21
+ Current staff: 26
+
+ Time: 63
+ Starting: 3
+ Finished: 8
+ Current staff: 29
+
+ Time: 64
+ Starting: 25
+ Finished: 3
+ Finished: 22
+ Current staff: 21
+
+ Time: 66
+ No new tasks have been started.
+ Finished: 26
+ Current staff: 14
+
+ Time: 119
+ Starting: 4
+ Finished: 24
+ Current staff: 13
+
+ Time: 124
+ Starting: 5
+ Starting: 27
+ Finished: 25
+ Current staff: 22
+
+ Time: 134
+ No new tasks have been started.
+ Finished: 4
+ Current staff: 16
+
+ Time: 136
+ No new tasks have been started.
+ Finished: 5
+ Current staff: 10
+
+ Time: 149
+ Starting: 28
+ Starting: 29
+ Finished: 27
+ Current staff: 20
+
+ Time: 179
+ No new tasks have been started.
+ Finished: 28
+ Current staff: 10
+
+ Time: 186
+ Starting: 1
+ Starting: 6
+ Starting: 7
+ Starting: 30
+ Finished: 29
+ Current staff: 29
+
+ Time: 204
+ No new tasks have been started.
+ Finished: 7
+ Current staff: 23
+
+ Time: 206
+ Starting: 31
+ Finished: 1
+ Finished: 30
+ Current staff: 13
+
+ Time: 213
+ No new tasks have been started.
+ Finished: 6
+ Current staff: 7
+
+ Time: 218
+ No new tasks have been started.
+ Finished: 31
+ Current staff: 0
+
+ WE'RE FINISHED CAP'N
+
+**** Shortest possible project execution is 218 ****
+

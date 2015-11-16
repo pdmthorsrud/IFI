@@ -1,0 +1,16 @@
+Realizability:
+Checking the realizability with the method searchLoop(Task t) which has a complexity of O(|V| + |E|). 
+In worst case scenario the method will visit every edge once, and every task once.
+In other words a linear complexity of O(|N|).
+
+
+Optimal time schedule:
+Checking the optimal time schedule is done by the method findEarliestStartAlt(Task t, int totalTime).
+This was originally done with a method called findEarliestStart(Task t, Task startTask, int totalTime).
+I did later realise that I could however just do findEarliestStart the other way around (which to me makes more sense), 
+which resulted in a complexity of O(V²). A squared complexity. This is because I have to start a recursive call from
+ALL tasks that are not dependent on any other tasks.
+
+Latest start, slack and critical tasks:
+Everything regarding latest start, slack and critical tasks are done at the same time from the method findLatestStartTimes(task t, int time). This method works in a similar fashion to the findEarliestStart, but this time I start in the other end, with ALL the tasks that
+are not necessary for any other tasks. This also have a complexity of O(V²) for the same reason optimal time schedule has it.
