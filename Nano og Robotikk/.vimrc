@@ -42,11 +42,11 @@ set hlsearch "highlifht searches
 :nmap <C-a> gg=G
 :nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 :nnoremap <leader>sv :source $MYVIMRC<cr>
-:nnoremap <leader>wf :w<cr>
+:nnoremap wf :w<cr>
 :nnoremap <C-i> :vertical resize +10<cr>
 :nnoremap <C-d> :vertical resize -10<cr>
 :inoremap jk <esc>
 
 :iabbrev sopl System.out.println 
 
-nnoremap <silent> <C-1> :noh1<cr><C-1>
+:nnoremap <silent> <C-1> :noh1<cr><C-1>
