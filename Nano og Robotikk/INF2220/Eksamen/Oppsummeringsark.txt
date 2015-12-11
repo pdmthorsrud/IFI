@@ -1,0 +1,129 @@
+* Dagens Plan
+ - Generelle tips til eksamen
+ - Kort oppsummering av kursets tema
+
+ - Q/A 
+
+ 
+ - Peer Instructions
+ 
+ 
+* Generelle tips
+  #+BEGIN_NOTES
+  her er litt notater for å hjelpe meg å huske
+  #+END_NOTES
+  #+ATTR_REVEAL: :frag roll-in
+  - Du blir bedømt etter hva du /viser/ at du kan
+  - Du må /begrunne/ svar
+  - Du må ikke /skrive/ av bøker eller foiler
+  - Gjør de /enkleste/ oppgavene først
+  - Les oppgavene nøye!
+    
+
+* Tema vi har sett på i kurset så langt
+  - Kompleksitet
+  - Binære søketrær
+  - Maps/Hashing
+  - Rekursjon/Kombinatorisk søk
+  - Prioritetskø/Heap
+  - Grafer
+  - Sortering
+  - Boyer Moore
+  - Huffman encoding
+
+* Kompleksitet
+  - Klasser og BigO
+  - Hvordan klassifisere en generell algoritme
+  - Opptelling av antall operasjoner
+
+
+
+* Binære søketrær DONE
+
+  - Ordningskrav
+  - Typisk bruk
+  - Kompleksitet
+  - Problemer
+    + Balansering
+    + Rød-sorte trær
+   
+  - B-trær
+
+* Maps/Hashing
+  - Nøkkel $\rightarrow$ Verdi mapping
+  - Hashfunksjoner 
+    + Hva gjør en hashfunksjon bra/dårlig?
+    + Hva blir brukt som nøkler?
+  - Åpne hashtabeller 
+  - Lukkede hashtabeller
+  - Kollisjonshåndtering / Re-hashing
+    
+* Rekursjon/Kombinatoriske søk
+
+  - Rekursjon
+    + Funksjoner som kaller seg selv
+    + Rekursive strukturer (binærtre, grafer ... )
+  - Kombinatoriske søk
+    + Rekursiv funksjon som genererer permutasjoner
+    + I kurset brukt for å illustrere filtrering/avskjæring
+
+* Prioritetskø/Heap
+  - Sorter jobber etter prioritet
+  - Binærheap: komplett binærtre med ordningskrav
+    + Foreldre har høyere prioritet enn barn
+    + Rot-node vil ha høyest prioritet
+    + Array blir brukt til å lagre treet
+  - Binærheap kan brukes til sortering
+
+* Grafer
+  - Konsept: Noder, Kanter, Rettet, Urettet, Vektet
+  - Representasjon
+  - Grafalgoritmer
+    + Topologisk sortering
+    + Korteste vei (vektet/uvektet) (Dtra, Bellman-Ford)
+    + Minimale spenntre (Kruskal/Prim)
+    + Biconnectivity
+    + Strongly connected components  
+      
+ * Sortering
+   - To hovedtyper sorteringsalgoritmer
+   - Sammenligningsbaserte
+     + Bubble-sort 
+     + Quick-sort
+     + Heap-sort
+     + Insertion-sort
+     + Shell-sort
+     + Merge-sort
+   - Verdibaserte
+     + Bucket-sort
+     + Radix-sort
+      
+* Boyer Moore
+  - Rask substring algoritme
+  - Matcher baklengs, tar utgangspunkt i byte verdier (256)
+  - Preprosessering av nål
+  - bad-character-shift
+    + Beregn avstand til neste gang nål er på linje med høystakk 
+  - good-suffix-shift
+    +  Bruk antall match før missmatch til å finne skip-avstand
+
+* Huffman enkoding
+  - Komprimering basert på frekvens av bokstaver
+  - Bokstaver blir til bitsekvenser av forskjellig lengde
+    + Lag et frekvenstre (bokstav : antall)
+    + Legg bokstavene på en Heap
+    + Slå sammen basert på frekvens
+    + Lag bitsekvenser for hver løvnode (bokstav)
+    + Skriv ny fil der bokstav byttes ut med bitsekvens
+
+* Dynamisk programmering
+  - Brukes på optimaliseringsproblemer
+    + Enkle delproblemer
+    + Delproblem-optimalisering
+    + Overlapp av delproblemer
+  - Floyds algoritme
+
+
+* Q/A
+* Lykke til på eksamen og takk for semesteret! :-) 
+

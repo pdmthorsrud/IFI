@@ -1,0 +1,46 @@
+Pensum
+
+Big O
+average case analysis
+worst case analysis
+Trær
+Binæresøketrær
+binærtrær
+b-trær
+
+rød svarte trær
+
+hashing
+hash tabeller
+hash - funksjoner
+
+Prioritetskø
+heap
+binær heap
+
+grafer
+topologisk sorteringer
+Dijkstras
+
+Prim
+Kruskal
+Dybde-først søk
+
+rekursjon
+
+pattern matching
+boyer moore
+bad characther shift
+good suffix shift
+boyer moore horsepool
+
+huffman
+dynamisk programmering
+floyds algoritme
+Paradigmer
+
+Boblesortering
+quick sort
+radix sort
+parallell radix
+bøtte
