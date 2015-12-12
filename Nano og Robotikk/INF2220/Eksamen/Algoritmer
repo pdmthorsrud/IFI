@@ -1,0 +1,18 @@
+Prim's algoritme
+* brukes på vektede grafer
+* Algoritme som lager et minimalt spenntre
+* Start med en random node
+* Velg korteste edge ut fra denne noden, sett noden til edgen til å være kjent
+* sjekk alle edger ut fra kjente vertices, velge korteste
+* rinse and repeat
+
+Dijkstra algoritme
+* brukes på vektede grafer
+* brukes til å finne korteste distanse til en node fra alle andre noder i grafen
+* Velger en startnode
+* Setter startnodens "tentative distance" til 0, og ALLE andres til uendelig
+* Setter startnoden til visited, og ALLE andre til unvisited.
+* Ser på alle noder som er reachable fra startnoden. Hvis distance fra noden til neste node er mindre en neste node sin tentative distance,
+* så oppdaterer du tentative distance.
+* Gjør dette for alle reachable noder fra startnoden.
+* Går så til noden med kortest avstand fra startnoden, og gjentar prossessen. Går så til neste node fra startnoden med nest kortest distance
