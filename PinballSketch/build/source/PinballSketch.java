@@ -1,3 +1,19 @@
+import processing.core.*; 
+import processing.data.*; 
+import processing.event.*; 
+import processing.opengl.*; 
+
+import java.util.HashMap; 
+import java.util.ArrayList; 
+import java.io.File; 
+import java.io.BufferedReader; 
+import java.io.PrintWriter; 
+import java.io.InputStream; 
+import java.io.OutputStream; 
+import java.io.IOException; 
+
+public class PinballSketch extends PApplet {
+
 int posBallX = 0;
 int posBallY = 0;
 int ballSpeed=4;
@@ -5,12 +21,12 @@ int ballSpeed=4;
 boolean down=true;
 boolean left=false;
 
-void setup(){
-  size(1000, 500);
+public void setup(){
+  
   background(0, 0, 0);
 }
 
-void draw(){
+public void draw(){
   if(posBallY>500){
     gameOver();
   }else{
@@ -25,7 +41,7 @@ void draw(){
   }
 }
 
-void moveBall(){
+public void moveBall(){
   if(down==false && left==false){
     moveBallRightUp();
   }else if(down==true && left==false){
@@ -37,7 +53,7 @@ void moveBall(){
   }
 }
 
-void gameOver(){
+public void gameOver(){
   background(255, 0, 0);
   fill(0, 0, 0);
   textSize(50);
@@ -45,7 +61,7 @@ void gameOver(){
   textAlign(CENTER, CENTER);
 }
 
-void setMovementBall(){
+public void setMovementBall(){
   if(posBallY==480 && posBallX>mouseX-40 && posBallX<=mouseX) {
     down=false;
     left=true;
@@ -67,18 +83,28 @@ void setMovementBall(){
   }
 }
 
-void moveBallRightDown(){
+public void moveBallRightDown(){
   ellipse(posBallX+=ballSpeed, posBallY+=ballSpeed, 15, 15);
 }
 
-void moveBallRightUp(){
+public void moveBallRightUp(){
   ellipse(posBallX+=ballSpeed, posBallY-=ballSpeed, 15, 15);
 }
 
-void moveBallLeftDown(){
+public void moveBallLeftDown(){
   ellipse(posBallX-=ballSpeed, posBallY+=ballSpeed, 15, 15);
 }
 
-void moveBallLeftUp(){
+public void moveBallLeftUp(){
   ellipse(posBallX-=ballSpeed, posBallY-=ballSpeed, 15, 15);
+}
+  public void settings() {  size(1000, 500); }
+  static public void main(String[] passedArgs) {
+    String[] appletArgs = new String[] { "PinballSketch" };
+    if (passedArgs != null) {
+      PApplet.main(concat(appletArgs, passedArgs));
+    } else {
+      PApplet.main(appletArgs);
+    }
+  }
 }
