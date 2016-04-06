@@ -14,89 +14,118 @@ import java.io.IOException;
 
 public class PinballSketch extends PApplet {
 
-int posBallX = 0;
-int posBallY = 0;
-int ballSpeed=4;
-
-boolean down=true;
-boolean left=false;
+public int posBat;
+MoveBall mb;
 
 public void setup(){
   
   background(0, 0, 0);
+  posBat=0;
+  mb = new MoveBall();
 }
 
 public void draw(){
-  if(posBallY>500){
+  if(mb.posBallY>500){
     gameOver();
   }else{
     background(0, 0, 0);
     fill(255, 255, 255);
-    text("y = " + posBallY, 10, 10);
-    text("x = " + posBallX, 10, 30);
-    setMovementBall();
-    moveBall();
-    fill(255, 0, 0);
-    rect((mouseX-40), 490, 80, 10);
+    mb.moveBall();
+    drawBat();
   }
 }
 
-public void moveBall(){
-  if(down==false && left==false){
-    moveBallRightUp();
-  }else if(down==true && left==false){
-    moveBallRightDown();
-  }else if(down==false && left==true){
-    moveBallLeftUp();
-  }else if(down==true && left==true){
-    moveBallLeftDown();
+public void drawBat(){
+  fill(255, 0, 0);
+  if(keyPressed){
+    if(keyCode==RIGHT){
+      posBat+=5;
+    }else if(keyCode==LEFT){
+      posBat-=5;
+    }
   }
+  rect(posBat, 490, 80, 10);
 }
 
 public void gameOver(){
   background(255, 0, 0);
   fill(0, 0, 0);
   textSize(50);
-  text("GAME OVER", 500, 250);
   textAlign(CENTER, CENTER);
-}
-
-public void setMovementBall(){
-  if(posBallY==480 && posBallX>mouseX-40 && posBallX<=mouseX) {
-    down=false;
-    left=true;
-  }else if(posBallY==480 && posBallX>mouseX && posBallX<mouseX+40){
-    down=false;
-    left=false;
-  }else if(posBallY==0 && posBallX==0){
-    down=true;
-    left=false;
-  }else if(posBallY==1000 && posBallX==1000){
-    down=true;
-    left=true;
-  }else if(posBallY==0){
-    down=true;
-  }else if(posBallX==0){
-    left=false;
-  }else if(posBallX==1000){
-    left=true;
+  text("GAME OVER", 500, 250);
+  textSize(25);
+  text("New Game (n)", 500, 310);
+  if(keyPressed){
+    if(key=='n'){
+      newGame();
+    }
   }
 }
 
-public void moveBallRightDown(){
-  ellipse(posBallX+=ballSpeed, posBallY+=ballSpeed, 15, 15);
+public void newGame(){
+  background(0, 0, 0);
+  mb.posBallX = 0;
+  mb.posBallY = 0;
 }
+class MoveBall{
+  boolean down=true;
+  boolean left=false;
+  public int posBallX;
+  public int posBallY;
+  int ballSpeed = 4;
 
-public void moveBallRightUp(){
-  ellipse(posBallX+=ballSpeed, posBallY-=ballSpeed, 15, 15);
-}
+  PinballSketch ps = new PinballSketch();
 
-public void moveBallLeftDown(){
-  ellipse(posBallX-=ballSpeed, posBallY+=ballSpeed, 15, 15);
-}
+  public void moveBall(){
+    setMovementBall();
+    if(down==false && left==false){
+      moveBallRightUp();
+    }else if(down==true && left==false){
+      moveBallRightDown();
+    }else if(down==false && left==true){
+      moveBallLeftUp();
+    }else if(down==true && left==true){
+      moveBallLeftDown();
+    }
+  }
 
-public void moveBallLeftUp(){
-  ellipse(posBallX-=ballSpeed, posBallY-=ballSpeed, 15, 15);
+  public void setMovementBall(){
+    if(posBallY==480 && posBallX>ps.posBat && posBallX<=ps.posBat+80) {
+      down=false;
+      left=true;
+    }else if(posBallY==480 && posBallX>ps.posBat+40 && posBallX<ps.posBat+80){
+      down=false;
+      left=false;
+    }else if(posBallY==0 && posBallX==0){
+      down=true;
+      left=false;
+    }else if(posBallY==1000 && posBallX==1000){
+      down=true;
+      left=true;
+    }else if(posBallY==0){
+      down=true;
+    }else if(posBallX==0){
+      left=false;
+    }else if(posBallX==1000){
+      left=true;
+    }
+  }
+
+  public void moveBallRightDown(){
+    ellipse(posBallX+=ballSpeed, posBallY+=ballSpeed, 15, 15);
+  }
+
+  public void moveBallRightUp(){
+    ellipse(posBallX+=ballSpeed, posBallY-=ballSpeed, 15, 15);
+  }
+
+  public void moveBallLeftDown(){
+    ellipse(posBallX-=ballSpeed, posBallY+=ballSpeed, 15, 15);
+  }
+
+  public void moveBallLeftUp(){
+    ellipse(posBallX-=ballSpeed, posBallY-=ballSpeed, 15, 15);
+  }
 }
   public void settings() {  size(1000, 500); }
   static public void main(String[] passedArgs) {
